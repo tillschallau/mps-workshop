@@ -1,2 +1,2 @@
-# Mps Workshop
+# mps-workshop
 
