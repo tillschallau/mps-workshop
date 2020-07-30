@@ -1,0 +1,226 @@
+% Vorlage fuer Handouts
+% zum Seminar "Diskrete Geometrie und Kombinatorik -- ein topologischer Zugang"
+% im WS 2008/09
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Allgemeine Hinweise
+% - Halten Sie den LaTeX-Code so uebersichtlich wie moeglich;
+%   (La)TeX-Fehlermeldungen sind oft kryptisch -- in einem ordentlich 
+%   strukturierten Quellcode lassen sich Fehler leichter finden und 
+%   beseitigen
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jedes LaTeX-Dokument muss eine \documentclass-Deklaration enthalten
+%   Diese sorgt fuer das allgemeine Seiten-Layout, das Aussehen der 
+%   Ueberschriften etc.
+\documentclass[a4paper,oneside,DIV8,10pt]{scrartcl}
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Einbinden weiterer Pakete
+  %\usepackage{english}    % fuer die deutschen Trennmuster
+  % \usepackage{ngerman} % entsprechend fuer die neue Rechtschreibung
+  \usepackage[latin1]{inputenc} % falls Sie Umlaute in den Quellen verwenden wollen
+  \usepackage{amsmath}   % enthaelt nuetzliche Makros fuer Mathematik
+  \usepackage{amsthm}    % fuer Saetze, Definitionen, Beweise, etc.
+  \usepackage{relsize}   % fuer \smaller 
+  \usepackage{hyperref}  % fuer \url  
+  \usepackage{graphicx}  % fuer Grafiken
+  \usepackage{listings}  % fuer code
+  \usepackage{xcolor}    % fuer Farben
+  \usepackage[section]{algorithm} % fuer Algorithmen
+  \usepackage{algorithmic}	      % fuer Algorithmen
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Coding environments
+  
+  \definecolor{javared}{rgb}{0.6,0,0} % for strings
+  \definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+  \definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+  \definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+  
+  \lstset{language=Java,
+  	basicstyle=\ttfamily,
+  	keywordstyle=\color{javapurple}\bfseries,
+  	stringstyle=\color{javared},
+  	commentstyle=\color{javagreen},
+  	morecomment=[s][\color{javadocblue}]{/**}{*/},
+  	morekeywords={String, Object},
+  	otherkeywords={Object},
+  	numbers=left,
+  	numberstyle=\color{black},
+  	stepnumber=1,
+  	numbersep=10pt,
+  	tabsize=4,
+  	showspaces=false,
+  	breaklines=true,
+  	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  	showstringspaces=false%
+  }
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Deklaration eigener Mathematik-Makros
+  \newcommand{\N}{\ensuremath{\mathbf{N}}}   % natuerliche Zahlen
+  \newcommand{\Z}{\ensuremath{\mathbf{Z}}}   % ganze Zahlen
+  \newcommand{\Q}{\ensuremath{\mathbf{Q}}}   % rationale Zahlen
+  \newcommand{\R}{\ensuremath{\mathbf{R}}}   % reelle Zahlen
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Deklaration eigener Satz-/Definitions-/Beweisumgebungen mit amsthm
+  \newtheorem{satz}{Satz}[section]
+  \newtheorem{lemma}[satz]{Lemma}
+  \newtheorem{korollar}[satz]{Korollar}
+  \theoremstyle{definition}
+  \newtheorem{definition}[satz]{Definition}
+  \newtheorem{bemerkung}[satz]{Bemerkung}
+  \newtheorem{aufgabe}[satz]{Exercise}
+  \newenvironment{beweis}%
+    {\begin{proof}[Beweis]}
+    {\end{proof}}
+  \newtheorem{beispiel}[satz]{Beispiel}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Deklaration weiterer Makros
+  \renewcommand{\labelitemi}{--}             % aendert die Symbole bei unnumerierten Aufzaehlungen
+  \makeatletter                              % Fussnote ohne Symbol
+    \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+  % Titel des Handouts
+  %   #1 Name des Vortragenden
+  %   #2 email-Adresse 
+  %   #3 Datum des Vortrags
+  %   #4 Titel des Vortrags
+  \newcommand{\handouttitle}[4]
+   {\begin{center}
+      \Large #4
+    \end{center}
+
+    \bigskip
+
+    \noindent
+    #1 (\textsf{#2})
+    \hfill
+    #3%
+    \blfootnote{MPS Workshop, AQUA, TU Dortmund}
+  
+    \noindent
+    \rule{\linewidth}{.5pt}
+
+    \bigskip
+
+    \@afterindentfalse\@afterheading
+   }
+  \makeatother
+  \renewcommand{\sectfont}{\normalfont}       % aendert den Font fuer Ueberschriften
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Anfang des eigentlichen Dokuments
+\begin{document}
+
+  % Titel fuer das Handout -- Sie koennen natuerlich auch selbst etwas entwerfen!
+  \handouttitle{Till Schallau}
+               {till.schallau@tu-dortmund.de}
+               {14.~September~2020}
+               {MPS Workshop}
+
+  The following exercise are designed to give you an in-depth understanding for the creation of languages using the MPS language workbench.
+  
+  \section{Setup}
+  
+  \begin{enumerate}
+  	\item Download the latest version of MPS for your operating system from \\ \url{https://www.jetbrains.com/de-de/mps/download/}
+  	\item Clone the \textit{mps-workshop} repository using \\
+  	\url{git@aqua-scm.cs.tu-dortmund.de:aqua/mps-workshop.git} or\\
+  	\url{https://aqua-scm.cs.tu-dortmund.de/aqua/mps-workshop.git}
+  	\item Open the project in MPS \texttt{File} $\rightarrow$ \texttt{Open}
+  	\item When prompted: \textit{migrate} the project
+  	\item Right-click on \texttt{mps-workshop} and select \texttt{Rebuild project}
+  \end{enumerate}
+
+  \section{MPS Hands-On}
+  
+  These exercises are designed to give you a feeling of how the projectional editor of MPS is working. For the following tasks, work on the \texttt{master} branch.
+  Navigate to the \texttt{sandbox}-model and create a new \texttt{JavaInMPSTest}-node as shown in Figure \ref{fig:sandbox}.
+  \begin{figure}[h]
+  	\centering
+  	\includegraphics[width=\textwidth]{graphics/sandbox.png}  
+  	\caption{Navigation menu for creation of a new \texttt{JavaInMPSTest}-node}
+  	\label{fig:sandbox}	
+  \end{figure}
+
+  \begin{aufgabe}
+  	Implement the code shown in Listing \ref{lst:read-name} in your \texttt{JavaInMPSTest}-node. Notice the change in the predefined code fragment while editing the name of the method. After completion rebuild the model by right-clicking onto \texttt{sandbox} $\rightarrow$ \texttt{Rebuild model}. When there are no more syntax and compilation errors, run the code by right-clicking onto \texttt{JavaInMPSTest} $\rightarrow$ \texttt{Run node}.\\
+  	\\
+  	\textbf{Note:} You can check the generated code by right-clicking onto the editor and select \texttt{Preview Generated Text}.
+  	
+  	\begin{lstlisting}[language=Java,caption={Java code to read a line from the console and print the result}, captionpos=b, label={lst:read-name}]
+public static void readLine(){
+	String name = "";
+	try{
+		System.out.println("Hello! Please enter your name.");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		name = br.readLine();
+		System.out.println("Hello " + name);
+	} catch(Exception e){
+		throw e;
+	}
+}
+  		\end{lstlisting}
+  \label{alg:read-name}
+  \end{aufgabe}
+
+  \begin{aufgabe}
+  	Be creative! Add a new \texttt{JavaInMPSTest}-node and add your own code.\\
+  	\\
+  	\textbf{Note:} If your desired class does not exist in your current context, you can add \textit{Accessories Models} by right-clicking onto \texttt{de.tudo.cs.ls14.aqua.mps.workshop.java} and got into the \texttt{Module Properties} menu. Navigate to \texttt{Runtime} $\rightarrow$ \texttt{Accessories Models} and add the required models using the \texttt{+} button.
+  \end{aufgabe}
+
+	\section{Expressions}
+	
+	This section is designed to show you the most important core aspects of MPS. Each sub-exercise can be pulled from their respective branch, such that each task can be done based on a shared code base.
+	
+	\begin{aufgabe}
+		Create a new language named \texttt{de.tudo.cs.ls14.aqua.mps.workshop.expressions} by right-clicking onto \texttt{mps-workshop} $\rightarrow$ \texttt{New} $\rightarrow$ \texttt{Language}. Check the \texttt{Create Sandbox Solution} in the process.
+	\end{aufgabe}
+
+	\begin{aufgabe}
+		Translate the BNF of Table \ref{table:bnf} into concepts. You may use abstract concepts to simplify the task and add internal structure.\\
+		Give each concept a meaningful name and short description.
+		\begin{table}
+			\begin{tabular}{ l r l }
+				Class & ::= & Function*\\
+				%
+				\\
+				%
+				Function & ::= & ID = AExp\\
+				& $|$ & ID = BExp \\
+				%
+				\\
+				%
+				AExp & ::= & AExp $+$ AExp\\
+					 & $|$ & AExp $-$ AExp\\
+					 & $|$ & AExp $*$ AExp\\
+					 & $|$ & AExp $/$ AExp\\
+					 & $|$ & INT\\
+			\end{tabular}
+			\begin{tabular}{ l r l }
+			BExp & ::= & BExp and BExp \\
+			& $|$ & BExp or BExp\\
+			& $|$ & AExp $==$ AExp\\
+			& $|$ & AExp $!=$ AExp\\
+			& $|$ & AExp $\geq$ AExp\\
+			& $|$ & AExp $>$ AExp\\
+			& $|$ & AExp $\leq$ AExp\\
+			& $|$ & AExp $<$ Aexp\\
+			& $|$ & True \\
+			& $|$ & False \\
+		\end{tabular}
+	\caption{BNF of arithmetic and boolean expressions}
+	\label{table:bnf}
+		\end{table}
+	\end{aufgabe}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ende des Dokuments -- alles, was nach dieser Zeile steht, wird 
+% von LaTeX ignoriert!
+\end{document}
