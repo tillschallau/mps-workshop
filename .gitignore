@@ -81,3 +81,23 @@ teamcity-info.xml
 
 #local mps files
 /mps-files
+
+#latex code
+**/*.aux
+**/*.log
+**/*.toc
+**/*.fdb_latexmk
+**/*.synctex.gz
+**/*.snm
+**/*.vrb
+**/*.nav
+**/*.out
+**/*.bbl
+**/*.blg
+**/*.fls
+**/*.lof
+**/*.DS_Store
+**/*.bak
+**/*.tdo
+**/*.pdf
+
