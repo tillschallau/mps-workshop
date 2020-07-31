@@ -57,6 +57,17 @@
   	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
   	showstringspaces=false%
   }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Deklaration der Keyboard Tasten
+  %Windows
+  \usepackage[os=win]{menukeys}
+  
+  %Mac OS X (symbols)
+  %\usepackage[os=mac, mackeys=symbols]{menukeys}
+  
+  %Mac OS X (text)
+  %\usepackage[os=mac, mackeys=text]{menukeys}
   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Deklaration eigener Mathematik-Makros
@@ -148,7 +159,7 @@
   \end{figure}
 
   \begin{aufgabe}
-  	Implement the code shown in Listing \ref{lst:read-name} in your \texttt{JavaInMPSTest}-node. Notice the change in the predefined code fragment while editing the name of the method. After completion rebuild the model by right-clicking onto \texttt{sandbox} $\rightarrow$ \texttt{Rebuild model}. When there are no more syntax and compilation errors, run the code by right-clicking onto \texttt{JavaInMPSTest} $\rightarrow$ \texttt{Run node}.\\
+  	Implement the code shown in Listing \ref{lst:read-name} in your \texttt{JavaInMPSTest}-node. Notice the change in the predefined code fragment while editing the name of the method. After completion rebuild the model by right-clicking onto \menu[,]{sandbox, Rebuild model}. When there are no more syntax and compilation errors, run the code by right-clicking onto \menu[,]{JavaInMPSTest, Run node}.\\
   	\\
   	\textbf{Note:} You can check the generated code by right-clicking onto the editor and select \texttt{Preview Generated Text}.
   	
@@ -171,7 +182,7 @@ public static void readLine(){
   \begin{aufgabe}
   	Be creative! Add a new \texttt{JavaInMPSTest}-node and add your own code.\\
   	\\
-  	\textbf{Note:} If your desired class does not exist in your current context, you can add \textit{Accessories Models} by right-clicking onto \texttt{de.tudo.cs.ls14.aqua.mps.workshop.java} and got into the \texttt{Module Properties} menu. Navigate to \texttt{Runtime} $\rightarrow$ \texttt{Accessories Models} and add the required models using the \texttt{+} button.
+  	\textbf{Note:} If your desired class does not exist in your current context, you can add \textit{Accessories Models} by right-clicking onto \menu[,]{de.tudo.cs.ls14.aqua.mps.workshop.java, Module Properties}. Navigate to \menu[,]{Runtime, Accessories Models} and add the required models using the \texttt{+} button.
   \end{aufgabe}
 
 	\section{Expressions}
@@ -179,7 +190,8 @@ public static void readLine(){
 	This section is designed to show you the most important core aspects of MPS. Each sub-exercise can be pulled from their respective branch, such that each task can be done based on a shared code base.
 	
 	\begin{aufgabe}
-		Create a new language named \texttt{de.tudo.cs.ls14.aqua.mps.workshop.expressions} by right-clicking onto \texttt{mps-workshop} $\rightarrow$ \texttt{New} $\rightarrow$ \texttt{Language}. Check the \texttt{Create Sandbox Solution} in the process.
+		Create a new language named \\
+		\texttt{de.tudo.cs.ls14.aqua.mps.workshop.expressions} by right-clicking onto\\ \menu[,]{mps-workshop, New, Language}. Check the \texttt{Create Sandbox Solution} in the process.
 	\end{aufgabe}
 
 	\begin{aufgabe}
@@ -217,6 +229,20 @@ public static void readLine(){
 	\caption{BNF of arithmetic and boolean expressions}
 	\label{table:bnf}
 		\end{table}
+	\end{aufgabe}
+
+	For the next exercise you can checkout the branch \menu{expressions} to work with the shared solution, or work with your own concepts.
+
+	\begin{aufgabe}
+		Add editors for your concepts, such that the order of operations is clearly visible.\\
+		\\
+		\textbf{Note:} For some visual modifications you may need the \menu{Inspector}. To show it, click on the respective button in the lower right corner of your IDE.
+	\end{aufgabe}
+
+	For the next exercise you can checkout the branch \menu{expression-editor} to work with the shared solution, or work with your own code.
+	
+	\begin{aufgabe}
+		Add intentions to each \texttt{AExp} and \texttt{BExp} to allow changing of the operator, without starting from scratch.
 	\end{aufgabe}
 
 
