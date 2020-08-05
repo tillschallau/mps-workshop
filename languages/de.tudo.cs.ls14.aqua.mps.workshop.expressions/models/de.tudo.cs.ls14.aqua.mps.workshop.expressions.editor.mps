@@ -442,5 +442,14 @@
       <node concept="l2Vlx" id="66ATIhpmkDy" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="66ATIhpmlF$">
+    <ref role="1XX52x" to="n5tj:66ATIhplrQt" resolve="IntVariable" />
+    <node concept="3EZMnI" id="66ATIhpmlFA" role="2wV5jI">
+      <node concept="3F0A7n" id="66ATIhpmlFE" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="l2Vlx" id="66ATIhpmlFD" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 
