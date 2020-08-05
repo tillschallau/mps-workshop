@@ -244,5 +244,18 @@
     <property role="R4oN_" value="&lt;left&gt; &lt;= &lt;right&gt;" />
     <ref role="1TJDcQ" node="1dDSgAZqg6a" resolve="CompareExpression" />
   </node>
+  <node concept="1TIwiD" id="66ATIhplrQr">
+    <property role="EcuMT" value="7036565336238701979" />
+    <property role="TrG5h" value="BoolVariable" />
+    <ref role="1TJDcQ" node="3hyw0iIEYg$" resolve="BooleanExpression" />
+    <node concept="PrWs8" id="66ATIhplrQs" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="66ATIhplrQt">
+    <property role="EcuMT" value="7036565336238701981" />
+    <property role="TrG5h" value="IntVariable" />
+    <ref role="1TJDcQ" node="3hyw0iIEYgz" resolve="ArithmeticExpression" />
+  </node>
 </model>
 
