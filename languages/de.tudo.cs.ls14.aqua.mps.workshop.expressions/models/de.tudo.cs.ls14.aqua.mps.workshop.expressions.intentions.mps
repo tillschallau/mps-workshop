@@ -43,6 +43,10 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT" />
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
@@ -1519,6 +1523,124 @@
             <node concept="1mIQ4w" id="66ATIhps6u8" role="2OqNvi">
               <node concept="chp4Y" id="66ATIhps6Aj" role="cj9EA">
                 <ref role="cht4Q" to="n5tj:1dDSgAZpXCj" resolve="IntConstant" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2S6QgY" id="66ATIhptj5A">
+    <property role="TrG5h" value="MakeBoolConstant" />
+    <ref role="2ZfgGC" to="n5tj:66ATIhplrQr" resolve="BoolVariable" />
+    <node concept="2S6ZIM" id="66ATIhptj5B" role="2ZfVej">
+      <node concept="3clFbS" id="66ATIhptj5C" role="2VODD2">
+        <node concept="3cpWs6" id="66ATIhptjaz" role="3cqZAp">
+          <node concept="Xl_RD" id="66ATIhptjb3" role="3cqZAk">
+            <property role="Xl_RC" value="Make &lt;bool&gt; Constant" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="66ATIhptj5D" role="2ZfgGD">
+      <node concept="3clFbS" id="66ATIhptj5E" role="2VODD2">
+        <node concept="3cpWs8" id="66ATIhptjVB" role="3cqZAp">
+          <node concept="3cpWsn" id="66ATIhptjVE" role="3cpWs9">
+            <property role="TrG5h" value="newNode" />
+            <node concept="3Tqbb2" id="66ATIhptjVA" role="1tU5fm">
+              <ref role="ehGHo" to="n5tj:1dDSgAZq7SW" resolve="BoolConstant" />
+            </node>
+            <node concept="2OqwBi" id="66ATIhptkb0" role="33vP2m">
+              <node concept="2Sf5sV" id="66ATIhptjWN" role="2Oq$k0" />
+              <node concept="1_qnLN" id="66ATIhptkos" role="2OqNvi">
+                <ref role="1_rbq0" to="n5tj:1dDSgAZq7SW" resolve="BoolConstant" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="66ATIhptkrw" role="3cqZAp">
+          <node concept="37vLTI" id="66ATIhptkNJ" role="3clFbG">
+            <node concept="3clFbT" id="66ATIhptkO9" role="37vLTx" />
+            <node concept="2OqwBi" id="66ATIhptktS" role="37vLTJ">
+              <node concept="37vLTw" id="66ATIhptkru" role="2Oq$k0">
+                <ref role="3cqZAo" node="66ATIhptjVE" resolve="newNode" />
+              </node>
+              <node concept="3TrcHB" id="66ATIhptkv6" role="2OqNvi">
+                <ref role="3TsBF5" to="n5tj:1dDSgAZq7SX" resolve="constant" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2SaL7w" id="66ATIhptjhD" role="2ZfVeh">
+      <node concept="3clFbS" id="66ATIhptjhE" role="2VODD2">
+        <node concept="3cpWs6" id="66ATIhptjlB" role="3cqZAp">
+          <node concept="2OqwBi" id="66ATIhptj_Q" role="3cqZAk">
+            <node concept="2Sf5sV" id="66ATIhptjm5" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="66ATIhptjQV" role="2OqNvi">
+              <node concept="chp4Y" id="66ATIhptjU0" role="cj9EA">
+                <ref role="cht4Q" to="n5tj:66ATIhplrQr" resolve="BoolVariable" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2S6QgY" id="66ATIhptkUj">
+    <property role="TrG5h" value="MakeIntConstant" />
+    <ref role="2ZfgGC" to="n5tj:66ATIhplrQt" resolve="IntVariable" />
+    <node concept="2S6ZIM" id="66ATIhptkUk" role="2ZfVej">
+      <node concept="3clFbS" id="66ATIhptkUl" role="2VODD2">
+        <node concept="3cpWs6" id="66ATIhptkZg" role="3cqZAp">
+          <node concept="Xl_RD" id="66ATIhptkZo" role="3cqZAk">
+            <property role="Xl_RC" value="Make &lt;int&gt; Constant" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="66ATIhptkUm" role="2ZfgGD">
+      <node concept="3clFbS" id="66ATIhptkUn" role="2VODD2">
+        <node concept="3cpWs8" id="66ATIhptlNE" role="3cqZAp">
+          <node concept="3cpWsn" id="66ATIhptlNH" role="3cpWs9">
+            <property role="TrG5h" value="newNode" />
+            <node concept="3Tqbb2" id="66ATIhptlND" role="1tU5fm">
+              <ref role="ehGHo" to="n5tj:1dDSgAZpXCj" resolve="IntConstant" />
+            </node>
+            <node concept="2OqwBi" id="66ATIhptm0F" role="33vP2m">
+              <node concept="2Sf5sV" id="66ATIhptlOC" role="2Oq$k0" />
+              <node concept="1_qnLN" id="66ATIhptme7" role="2OqNvi">
+                <ref role="1_rbq0" to="n5tj:1dDSgAZpXCj" resolve="IntConstant" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="66ATIhptmgP" role="3cqZAp">
+          <node concept="37vLTI" id="66ATIhptniB" role="3clFbG">
+            <node concept="3cmrfG" id="66ATIhptniT" role="37vLTx">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="2OqwBi" id="66ATIhptmpR" role="37vLTJ">
+              <node concept="37vLTw" id="66ATIhptmgN" role="2Oq$k0">
+                <ref role="3cqZAo" node="66ATIhptlNH" resolve="newNode" />
+              </node>
+              <node concept="3TrcHB" id="66ATIhptmzZ" role="2OqNvi">
+                <ref role="3TsBF5" to="n5tj:1dDSgAZpXCk" resolve="constant" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2SaL7w" id="66ATIhptl7o" role="2ZfVeh">
+      <node concept="3clFbS" id="66ATIhptl7p" role="2VODD2">
+        <node concept="3cpWs6" id="66ATIhptlbm" role="3cqZAp">
+          <node concept="2OqwBi" id="66ATIhptlr_" role="3cqZAk">
+            <node concept="2Sf5sV" id="66ATIhptlbO" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="66ATIhptlD7" role="2OqNvi">
+              <node concept="chp4Y" id="66ATIhptlGc" role="cj9EA">
+                <ref role="cht4Q" to="n5tj:66ATIhplrQt" resolve="IntVariable" />
               </node>
             </node>
           </node>
