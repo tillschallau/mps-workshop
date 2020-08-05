@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="n5tj" ref="r:e90653f4-fb78-4858-812e-e12bc87a31b0(de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -76,6 +77,9 @@
       </concept>
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
+      </concept>
+      <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
+        <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
       <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
         <reference id="1138056516764" name="link" index="3Tt5mk" />
@@ -1340,6 +1344,66 @@
                 <node concept="chp4Y" id="4R0titEVXqG" role="cj9EA">
                   <ref role="cht4Q" to="n5tj:1dDSgAZqcbb" resolve="NotEqualsExpression" />
                 </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2S6QgY" id="66ATIhpnTBl">
+    <property role="TrG5h" value="MakeBoolVariable" />
+    <ref role="2ZfgGC" to="n5tj:1dDSgAZq7SW" resolve="BoolConstant" />
+    <node concept="2S6ZIM" id="66ATIhpnTBm" role="2ZfVej">
+      <node concept="3clFbS" id="66ATIhpnTBn" role="2VODD2">
+        <node concept="3cpWs6" id="66ATIhpnUaU" role="3cqZAp">
+          <node concept="Xl_RD" id="66ATIhpnUb2" role="3cqZAk">
+            <property role="Xl_RC" value="Make &lt;bool&gt; Variable" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="66ATIhpnTBo" role="2ZfgGD">
+      <node concept="3clFbS" id="66ATIhpnTBp" role="2VODD2">
+        <node concept="3cpWs8" id="66ATIhpnW5K" role="3cqZAp">
+          <node concept="3cpWsn" id="66ATIhpnW5L" role="3cpWs9">
+            <property role="TrG5h" value="newNode" />
+            <node concept="3Tqbb2" id="66ATIhpnW5J" role="1tU5fm">
+              <ref role="ehGHo" to="n5tj:66ATIhplrQr" resolve="BoolVariable" />
+            </node>
+            <node concept="2OqwBi" id="66ATIhpnVrF" role="33vP2m">
+              <node concept="2Sf5sV" id="66ATIhpnVj8" role="2Oq$k0" />
+              <node concept="1_qnLN" id="66ATIhpnVAe" role="2OqNvi">
+                <ref role="1_rbq0" to="n5tj:66ATIhplrQr" resolve="BoolVariable" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="66ATIhpnW7Z" role="3cqZAp">
+          <node concept="37vLTI" id="66ATIhpnWLC" role="3clFbG">
+            <node concept="Xl_RD" id="66ATIhpo7CL" role="37vLTx">
+              <property role="Xl_RC" value="x" />
+            </node>
+            <node concept="2OqwBi" id="66ATIhpnWhr" role="37vLTJ">
+              <node concept="37vLTw" id="66ATIhpnW7X" role="2Oq$k0">
+                <ref role="3cqZAo" node="66ATIhpnW5L" resolve="newNode" />
+              </node>
+              <node concept="3TrcHB" id="66ATIhpnWt7" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2SaL7w" id="66ATIhpnUvb" role="2ZfVeh">
+      <node concept="3clFbS" id="66ATIhpnUvc" role="2VODD2">
+        <node concept="3cpWs6" id="66ATIhpnUvA" role="3cqZAp">
+          <node concept="2OqwBi" id="66ATIhpnUHV" role="3cqZAk">
+            <node concept="2Sf5sV" id="66ATIhpnUvI" role="2Oq$k0" />
+            <node concept="1mIQ4w" id="66ATIhpnV1r" role="2OqNvi">
+              <node concept="chp4Y" id="66ATIhpnV7M" role="cj9EA">
+                <ref role="cht4Q" to="n5tj:1dDSgAZq7SW" resolve="BoolConstant" />
               </node>
             </node>
           </node>
