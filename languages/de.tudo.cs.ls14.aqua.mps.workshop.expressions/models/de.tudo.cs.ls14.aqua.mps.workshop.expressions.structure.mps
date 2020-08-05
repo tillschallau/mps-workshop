@@ -18,6 +18,9 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ">
+        <child id="1169127546356" name="extends" index="PrDN$" />
+      </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -253,8 +256,8 @@
     <property role="TrG5h" value="BoolVariable" />
     <property role="R4oN_" value="&lt;var&gt; bool" />
     <ref role="1TJDcQ" node="3hyw0iIEYg$" resolve="BooleanExpression" />
-    <node concept="PrWs8" id="66ATIhplrQs" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <node concept="PrWs8" id="66ATIhpoefC" role="PzmwI">
+      <ref role="PrY4T" node="66ATIhpodbA" resolve="IVariable" />
     </node>
   </node>
   <node concept="1TIwiD" id="66ATIhplrQt">
@@ -262,7 +265,14 @@
     <property role="TrG5h" value="IntVariable" />
     <property role="R4oN_" value="&lt;var&gt; int" />
     <ref role="1TJDcQ" node="3hyw0iIEYgz" resolve="ArithmeticExpression" />
-    <node concept="PrWs8" id="66ATIhpmkEx" role="PzmwI">
+    <node concept="PrWs8" id="66ATIhpodbB" role="PzmwI">
+      <ref role="PrY4T" node="66ATIhpodbA" resolve="IVariable" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="66ATIhpodbA">
+    <property role="TrG5h" value="IVariable" />
+    <property role="EcuMT" value="7036565336239416866" />
+    <node concept="PrWs8" id="66ATIhpoaoz" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
