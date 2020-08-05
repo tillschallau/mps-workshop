@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -16,6 +17,9 @@
         <property id="4628067390765956802" name="abstract" index="R5$K7" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
+      </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ">
+        <child id="1169127546356" name="extends" index="PrDN$" />
       </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
@@ -55,6 +59,9 @@
       <property role="20kJfa" value="functions" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="3hyw0iIEYgy" resolve="Function" />
+    </node>
+    <node concept="PrWs8" id="66ATIhplFlu" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
     </node>
   </node>
   <node concept="1TIwiD" id="3hyw0iIEYgy">
@@ -121,7 +128,6 @@
   <node concept="1TIwiD" id="1dDSgAZq8vE">
     <property role="EcuMT" value="1398896591257503722" />
     <property role="TrG5h" value="BinaryBooleanExpression" />
-    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="3hyw0iIEYg$" resolve="BooleanExpression" />
     <node concept="1TJgyj" id="1dDSgAZq8ba" role="1TKVEi">
       <property role="IQ2ns" value="1398896591257502410" />
@@ -153,7 +159,6 @@
   <node concept="1TIwiD" id="1dDSgAZqakS">
     <property role="EcuMT" value="1398896591257511224" />
     <property role="TrG5h" value="BinaryArithmeticExpression" />
-    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="3hyw0iIEYgz" resolve="ArithmeticExpression" />
     <node concept="1TJgyj" id="1dDSgAZqakT" role="1TKVEi">
       <property role="IQ2ns" value="1398896591257511225" />
@@ -203,7 +208,6 @@
   <node concept="1TIwiD" id="1dDSgAZqg6a">
     <property role="EcuMT" value="1398896591257534858" />
     <property role="TrG5h" value="CompareExpression" />
-    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="3hyw0iIEYg$" resolve="BooleanExpression" />
     <node concept="1TJgyj" id="1dDSgAZqg6b" role="1TKVEi">
       <property role="IQ2ns" value="1398896591257534859" />
@@ -243,6 +247,31 @@
     <property role="TrG5h" value="LessEqualExpression" />
     <property role="R4oN_" value="&lt;left&gt; &lt;= &lt;right&gt;" />
     <ref role="1TJDcQ" node="1dDSgAZqg6a" resolve="CompareExpression" />
+  </node>
+  <node concept="1TIwiD" id="66ATIhplrQr">
+    <property role="EcuMT" value="7036565336238701979" />
+    <property role="TrG5h" value="BoolVariable" />
+    <property role="R4oN_" value="&lt;var&gt; bool" />
+    <ref role="1TJDcQ" node="3hyw0iIEYg$" resolve="BooleanExpression" />
+    <node concept="PrWs8" id="66ATIhpoefC" role="PzmwI">
+      <ref role="PrY4T" node="66ATIhpodbA" resolve="IVariable" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="66ATIhplrQt">
+    <property role="EcuMT" value="7036565336238701981" />
+    <property role="TrG5h" value="IntVariable" />
+    <property role="R4oN_" value="&lt;var&gt; int" />
+    <ref role="1TJDcQ" node="3hyw0iIEYgz" resolve="ArithmeticExpression" />
+    <node concept="PrWs8" id="66ATIhpodbB" role="PzmwI">
+      <ref role="PrY4T" node="66ATIhpodbA" resolve="IVariable" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="66ATIhpodbA">
+    <property role="TrG5h" value="IVariable" />
+    <property role="EcuMT" value="7036565336239416866" />
+    <node concept="PrWs8" id="66ATIhpoaoz" role="PrDN$">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
 </model>
 

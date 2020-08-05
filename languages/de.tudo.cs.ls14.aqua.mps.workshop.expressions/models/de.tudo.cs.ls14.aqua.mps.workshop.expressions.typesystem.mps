@@ -8,6 +8,7 @@
   <imports>
     <import index="n5tj" ref="r:e90653f4-fb78-4858-812e-e12bc87a31b0(de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="pxwn" ref="r:70c13cc5-6d43-4439-8901-93c1b7cc3cda(de.tudo.cs.ls14.aqua.mps.workshop.expressions.behavior)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -60,6 +61,12 @@
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
+      <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
+        <child id="1079359253376" name="expression" index="1eOMHV" />
+      </concept>
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
+        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+      </concept>
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
@@ -107,11 +114,19 @@
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
+      <concept id="1138411891628" name="jetbrains.mps.lang.smodel.structure.SNodeOperation" flags="nn" index="eCIE_">
+        <child id="1144104376918" name="parameter" index="1xVPHs" />
+      </concept>
+      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
         <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
+      <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
       <concept id="1139613262185" name="jetbrains.mps.lang.smodel.structure.Node_GetParentOperation" flags="nn" index="1mfA1w" />
+      <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
+        <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
+      </concept>
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI" />
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
@@ -146,7 +161,7 @@
     </language>
   </registry>
   <node concept="18kY7G" id="5CJr5ltbWUq">
-    <property role="TrG5h" value="check_Function" />
+    <property role="TrG5h" value="check_FunctionForDuplicateNames" />
     <node concept="3clFbS" id="5CJr5ltbWUr" role="18ibNy">
       <node concept="3cpWs8" id="5CJr5ltclD2" role="3cqZAp">
         <node concept="3cpWsn" id="5CJr5ltclD5" role="3cpWs9">
@@ -205,7 +220,7 @@
                         </node>
                       </node>
                       <node concept="3Cnw8n" id="5CJr5ltcuxa" role="1urrFz">
-                        <ref role="QpYPw" node="5CJr5ltcb4w" resolve="FixDuplicateName" />
+                        <ref role="QpYPw" node="5CJr5ltcb4w" resolve="FixDuplicateFunctionName" />
                       </node>
                       <node concept="37vLTw" id="5CJr5ltcv5o" role="1urrMF">
                         <ref role="3cqZAo" node="5CJr5ltcscZ" resolve="it" />
@@ -265,7 +280,7 @@
     </node>
   </node>
   <node concept="Q5z_Y" id="5CJr5ltcb4w">
-    <property role="TrG5h" value="FixDuplicateName" />
+    <property role="TrG5h" value="FixDuplicateFunctionName" />
     <node concept="Q5ZZ6" id="5CJr5ltcb4x" role="Q6x$H">
       <node concept="3clFbS" id="5CJr5ltcb4y" role="2VODD2">
         <node concept="3clFbF" id="5CJr5ltcbg6" role="3cqZAp">
@@ -305,6 +320,174 @@
       <node concept="3clFbS" id="5CJr5ltcb4O" role="2VODD2">
         <node concept="3clFbF" id="5CJr5ltcb9o" role="3cqZAp">
           <node concept="Xl_RD" id="5CJr5ltcb9n" role="3clFbG">
+            <property role="Xl_RC" value="Replace duplicate name" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="18kY7G" id="66ATIhpuDqV">
+    <property role="TrG5h" value="check_VariableForDuplicateNames" />
+    <node concept="3clFbS" id="66ATIhpuDqW" role="18ibNy">
+      <node concept="3cpWs8" id="66ATIhpuE10" role="3cqZAp">
+        <node concept="3cpWsn" id="66ATIhpuE11" role="3cpWs9">
+          <property role="TrG5h" value="names" />
+          <node concept="2hMVRd" id="66ATIhpuE12" role="1tU5fm">
+            <node concept="17QB3L" id="66ATIhpuE13" role="2hN53Y" />
+          </node>
+          <node concept="2ShNRf" id="66ATIhpuE14" role="33vP2m">
+            <node concept="2i4dXS" id="66ATIhpuE15" role="2ShVmc">
+              <node concept="17QB3L" id="66ATIhpuE16" role="HW$YZ" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbF" id="66ATIhpuE17" role="3cqZAp">
+        <node concept="2OqwBi" id="66ATIhpuIhr" role="3clFbG">
+          <node concept="2OqwBi" id="66ATIhpuE19" role="2Oq$k0">
+            <node concept="2OqwBi" id="66ATIhpuE1c" role="2Oq$k0">
+              <node concept="1YBJjd" id="66ATIhpuEP8" role="2Oq$k0">
+                <ref role="1YBMHb" node="66ATIhpuDqY" resolve="iVariable" />
+              </node>
+              <node concept="2Xjw5R" id="66ATIhpuG1W" role="2OqNvi">
+                <node concept="1xMEDy" id="66ATIhpuG1Y" role="1xVPHs">
+                  <node concept="chp4Y" id="66ATIhpuGc9" role="ri$Ld">
+                    <ref role="cht4Q" to="n5tj:3hyw0iIEYgy" resolve="Function" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2qgKlT" id="66ATIhpuGDi" role="2OqNvi">
+              <ref role="37wK5l" to="pxwn:66ATIhppRb1" resolve="getVariables" />
+            </node>
+          </node>
+          <node concept="2es0OD" id="66ATIhpuJGA" role="2OqNvi">
+            <node concept="1bVj0M" id="66ATIhpuJGC" role="23t8la">
+              <node concept="3clFbS" id="66ATIhpuJGD" role="1bW5cS">
+                <node concept="3clFbH" id="66ATIhpuJMP" role="3cqZAp" />
+                <node concept="3clFbJ" id="66ATIhpuJWs" role="3cqZAp">
+                  <node concept="3clFbS" id="66ATIhpuJWu" role="3clFbx">
+                    <node concept="2MkqsV" id="66ATIhpuMzp" role="3cqZAp">
+                      <node concept="3cpWs3" id="66ATIhpuMzq" role="2MkJ7o">
+                        <node concept="Xl_RD" id="66ATIhpuMzr" role="3uHU7w">
+                          <property role="Xl_RC" value="' already exists" />
+                        </node>
+                        <node concept="3cpWs3" id="66ATIhpuMzs" role="3uHU7B">
+                          <node concept="Xl_RD" id="66ATIhpuMzt" role="3uHU7B">
+                            <property role="Xl_RC" value="The variable name '" />
+                          </node>
+                          <node concept="2OqwBi" id="66ATIhpuMzu" role="3uHU7w">
+                            <node concept="37vLTw" id="66ATIhpuN21" role="2Oq$k0">
+                              <ref role="3cqZAo" node="66ATIhpuJGE" resolve="it" />
+                            </node>
+                            <node concept="3TrcHB" id="66ATIhpuMzw" role="2OqNvi">
+                              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3Cnw8n" id="66ATIhpv8Ys" role="1urrFz">
+                        <ref role="QpYPw" node="66ATIhpuWbE" resolve="FixDuplicateVariableName" />
+                      </node>
+                      <node concept="37vLTw" id="66ATIhpuMzy" role="1urrMF">
+                        <ref role="3cqZAo" node="66ATIhpuJGE" resolve="it" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="66ATIhpuKQs" role="3clFbw">
+                    <node concept="37vLTw" id="66ATIhpuK6$" role="2Oq$k0">
+                      <ref role="3cqZAo" node="66ATIhpuE11" resolve="names" />
+                    </node>
+                    <node concept="3JPx81" id="66ATIhpuLul" role="2OqNvi">
+                      <node concept="1eOMI4" id="66ATIhpuLzP" role="25WWJ7">
+                        <node concept="2OqwBi" id="66ATIhpuM8o" role="1eOMHV">
+                          <node concept="37vLTw" id="66ATIhpuLVu" role="2Oq$k0">
+                            <ref role="3cqZAo" node="66ATIhpuJGE" resolve="it" />
+                          </node>
+                          <node concept="3TrcHB" id="66ATIhpuMpb" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="9aQIb" id="66ATIhpuNez" role="9aQIa">
+                    <node concept="3clFbS" id="66ATIhpuNe$" role="9aQI4">
+                      <node concept="3clFbF" id="66ATIhpuNkO" role="3cqZAp">
+                        <node concept="2OqwBi" id="66ATIhpuO3b" role="3clFbG">
+                          <node concept="37vLTw" id="66ATIhpuNkN" role="2Oq$k0">
+                            <ref role="3cqZAo" node="66ATIhpuE11" resolve="names" />
+                          </node>
+                          <node concept="TSZUe" id="66ATIhpuOM4" role="2OqNvi">
+                            <node concept="2OqwBi" id="66ATIhpuPHD" role="25WWJ7">
+                              <node concept="37vLTw" id="66ATIhpuPg$" role="2Oq$k0">
+                                <ref role="3cqZAo" node="66ATIhpuJGE" resolve="it" />
+                              </node>
+                              <node concept="3TrcHB" id="66ATIhpuQ1v" role="2OqNvi">
+                                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="Rh6nW" id="66ATIhpuJGE" role="1bW2Oz">
+                <property role="TrG5h" value="it" />
+                <node concept="2jxLKc" id="66ATIhpuJGF" role="1tU5fm" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="66ATIhpuDqY" role="1YuTPh">
+      <property role="TrG5h" value="iVariable" />
+      <ref role="1YaFvo" to="n5tj:66ATIhpodbA" resolve="IVariable" />
+    </node>
+  </node>
+  <node concept="Q5z_Y" id="66ATIhpuWbE">
+    <property role="TrG5h" value="FixDuplicateVariableName" />
+    <node concept="Q5ZZ6" id="66ATIhpuWbF" role="Q6x$H">
+      <node concept="3clFbS" id="66ATIhpuWbG" role="2VODD2">
+        <node concept="3clFbF" id="66ATIhpuWuo" role="3cqZAp">
+          <node concept="37vLTI" id="66ATIhpuX3k" role="3clFbG">
+            <node concept="2OqwBi" id="66ATIhpuXSF" role="37vLTJ">
+              <node concept="1PxgMI" id="66ATIhpuXBt" role="2Oq$k0">
+                <node concept="chp4Y" id="66ATIhpuXCd" role="3oSUPX">
+                  <ref role="cht4Q" to="n5tj:66ATIhpodbA" resolve="IVariable" />
+                </node>
+                <node concept="Q6c8r" id="66ATIhpuX4T" role="1m5AlR" />
+              </node>
+              <node concept="3TrcHB" id="66ATIhpuY1w" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="66ATIhpuWP5" role="37vLTx">
+              <node concept="2OqwBi" id="66ATIhpuW$W" role="2Oq$k0">
+                <node concept="Q6c8r" id="66ATIhpuWun" role="2Oq$k0" />
+                <node concept="2Xjw5R" id="66ATIhpuWEs" role="2OqNvi">
+                  <node concept="1xMEDy" id="66ATIhpuWEu" role="1xVPHs">
+                    <node concept="chp4Y" id="66ATIhpuWGx" role="ri$Ld">
+                      <ref role="cht4Q" to="n5tj:3hyw0iIEYgy" resolve="Function" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2qgKlT" id="66ATIhpuWY4" role="2OqNvi">
+                <ref role="37wK5l" to="pxwn:66ATIhps8JF" resolve="getNewVariableName" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="QznSV" id="66ATIhpuWoo" role="QzAvj">
+      <node concept="3clFbS" id="66ATIhpuWop" role="2VODD2">
+        <node concept="3clFbF" id="66ATIhpuWoU" role="3cqZAp">
+          <node concept="Xl_RD" id="66ATIhpuWoT" role="3clFbG">
             <property role="Xl_RC" value="Replace duplicate name" />
           </node>
         </node>
