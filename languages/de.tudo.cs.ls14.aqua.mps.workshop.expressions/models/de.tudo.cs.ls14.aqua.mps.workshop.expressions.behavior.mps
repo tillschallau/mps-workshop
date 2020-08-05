@@ -27,10 +27,6 @@
       <concept id="1225194691553" name="jetbrains.mps.lang.behavior.structure.ThisNodeExpression" flags="nn" index="13iPFW" />
     </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
-        <child id="1068498886297" name="rValue" index="37vLTx" />
-        <child id="1068498886295" name="lValue" index="37vLTJ" />
-      </concept>
       <concept id="1153422305557" name="jetbrains.mps.baseLanguage.structure.LessThanOrEqualsExpression" flags="nn" index="2dkUwp" />
       <concept id="4836112446988635817" name="jetbrains.mps.baseLanguage.structure.UndefinedType" flags="in" index="2jxLKc" />
       <concept id="1239714755177" name="jetbrains.mps.baseLanguage.structure.AbstractUnaryNumberOperation" flags="nn" index="2$Kvd9">
@@ -64,7 +60,6 @@
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
-      <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
@@ -283,14 +278,9 @@
                 </node>
               </node>
               <node concept="3clFbS" id="66ATIhpqlz1" role="3clFbx">
-                <node concept="3clFbF" id="66ATIhpqn9$" role="3cqZAp">
-                  <node concept="37vLTI" id="66ATIhpqnvA" role="3clFbG">
-                    <node concept="2GrUjf" id="66ATIhpqn$a" role="37vLTx">
-                      <ref role="2Gs0qQ" node="66ATIhpqlwT" resolve="name" />
-                    </node>
-                    <node concept="37vLTw" id="66ATIhpqn9z" role="37vLTJ">
-                      <ref role="3cqZAo" node="66ATIhpqlvP" resolve="newName" />
-                    </node>
+                <node concept="3cpWs6" id="66ATIhprEvb" role="3cqZAp">
+                  <node concept="2GrUjf" id="66ATIhprEvw" role="3cqZAk">
+                    <ref role="2Gs0qQ" node="66ATIhpqlwT" resolve="name" />
                   </node>
                 </node>
               </node>
