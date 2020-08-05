@@ -269,13 +269,13 @@
       </node>
     </node>
     <node concept="3aamgX" id="66ATIhpgtka" role="3acgRq">
-      <ref role="30HIoZ" to="n5tj:1dDSgAZqakR" resolve="AdditionExpression" />
+      <ref role="30HIoZ" to="n5tj:1dDSgAZqakR" resolve="PlusExpression" />
       <node concept="j$656" id="66ATIhpgtky" role="1lVwrX">
         <ref role="v9R2y" node="66ATIhpgftK" resolve="reduce_AdditionExpression" />
       </node>
     </node>
     <node concept="3aamgX" id="66ATIhpgFVZ" role="3acgRq">
-      <ref role="30HIoZ" to="n5tj:1dDSgAZqbbq" resolve="SubtractionExpression" />
+      <ref role="30HIoZ" to="n5tj:1dDSgAZqbbq" resolve="MinusExpression" />
       <node concept="j$656" id="66ATIhpgFWp" role="1lVwrX">
         <ref role="v9R2y" node="66ATIhpgtk_" resolve="reduce_SubtractionExpression" />
       </node>
@@ -935,7 +935,7 @@
   </node>
   <node concept="13MO4I" id="66ATIhpgftK">
     <property role="TrG5h" value="reduce_AdditionExpression" />
-    <ref role="3gUMe" to="n5tj:1dDSgAZqakR" resolve="AdditionExpression" />
+    <ref role="3gUMe" to="n5tj:1dDSgAZqakR" resolve="PlusExpression" />
     <node concept="3clFb_" id="66ATIhpgfz4" role="13RCb5">
       <property role="TrG5h" value="plus" />
       <node concept="3clFbS" id="66ATIhpgfz7" role="3clF47">
@@ -994,7 +994,7 @@
   </node>
   <node concept="13MO4I" id="66ATIhpgtk_">
     <property role="TrG5h" value="reduce_SubtractionExpression" />
-    <ref role="3gUMe" to="n5tj:1dDSgAZqbbq" resolve="SubtractionExpression" />
+    <ref role="3gUMe" to="n5tj:1dDSgAZqbbq" resolve="MinusExpression" />
     <node concept="3clFb_" id="66ATIhpgtpT" role="13RCb5">
       <property role="TrG5h" value="minus" />
       <node concept="3clFbS" id="66ATIhpgtpW" role="3clF47">
