@@ -298,13 +298,13 @@
     </node>
   </node>
   <node concept="2S6QgY" id="4R0titEVkYw">
-    <property role="TrG5h" value="MakeAddExpression" />
+    <property role="TrG5h" value="MakePlusExpression" />
     <ref role="2ZfgGC" to="n5tj:1dDSgAZqakS" resolve="BinaryArithmeticExpression" />
     <node concept="2S6ZIM" id="4R0titEVkYx" role="2ZfVej">
       <node concept="3clFbS" id="4R0titEVkYy" role="2VODD2">
         <node concept="3cpWs6" id="4R0titEVqZE" role="3cqZAp">
           <node concept="Xl_RD" id="4R0titEVqZF" role="3cqZAk">
-            <property role="Xl_RC" value="Make &lt;Add&gt; Expression" />
+            <property role="Xl_RC" value="Make &lt;Plus&gt; Expression" />
           </node>
         </node>
       </node>
@@ -343,12 +343,12 @@
           <node concept="3cpWsn" id="4R0titEVmxf" role="3cpWs9">
             <property role="TrG5h" value="newNode" />
             <node concept="3Tqbb2" id="4R0titEVmxa" role="1tU5fm">
-              <ref role="ehGHo" to="n5tj:1dDSgAZqakR" resolve="AdditionExpression" />
+              <ref role="ehGHo" to="n5tj:1dDSgAZqakR" resolve="PlusExpression" />
             </node>
             <node concept="2OqwBi" id="4R0titEVm$S" role="33vP2m">
               <node concept="2Sf5sV" id="4R0titEVmyH" role="2Oq$k0" />
               <node concept="1_qnLN" id="4R0titEVmKm" role="2OqNvi">
-                <ref role="1_rbq0" to="n5tj:1dDSgAZqakR" resolve="AdditionExpression" />
+                <ref role="1_rbq0" to="n5tj:1dDSgAZqakR" resolve="PlusExpression" />
               </node>
             </node>
           </node>
@@ -393,7 +393,7 @@
               <node concept="2Sf5sV" id="4R0titEVliC" role="2Oq$k0" />
               <node concept="1mIQ4w" id="4R0titEVlFF" role="2OqNvi">
                 <node concept="chp4Y" id="4R0titEVlIx" role="cj9EA">
-                  <ref role="cht4Q" to="n5tj:1dDSgAZqakR" resolve="AdditionExpression" />
+                  <ref role="cht4Q" to="n5tj:1dDSgAZqakR" resolve="PlusExpression" />
                 </node>
               </node>
             </node>
@@ -613,13 +613,13 @@
     </node>
   </node>
   <node concept="2S6QgY" id="4R0titEVuFe">
-    <property role="TrG5h" value="MakeSubExpression" />
+    <property role="TrG5h" value="MakeMinusExpression" />
     <ref role="2ZfgGC" to="n5tj:1dDSgAZqakS" resolve="BinaryArithmeticExpression" />
     <node concept="2S6ZIM" id="4R0titEVuFf" role="2ZfVej">
       <node concept="3clFbS" id="4R0titEVuFg" role="2VODD2">
         <node concept="3cpWs6" id="4R0titEVuKh" role="3cqZAp">
           <node concept="Xl_RD" id="4R0titEVuOR" role="3cqZAk">
-            <property role="Xl_RC" value="Make &lt;Sub&gt; Expression" />
+            <property role="Xl_RC" value="Make &lt;Minus&gt; Expression" />
           </node>
         </node>
       </node>
@@ -658,12 +658,12 @@
           <node concept="3cpWsn" id="4R0titEVvRU" role="3cpWs9">
             <property role="TrG5h" value="newNode" />
             <node concept="3Tqbb2" id="4R0titEVvRP" role="1tU5fm">
-              <ref role="ehGHo" to="n5tj:1dDSgAZqbbq" resolve="SubtractionExpression" />
+              <ref role="ehGHo" to="n5tj:1dDSgAZqbbq" resolve="MinusExpression" />
             </node>
             <node concept="2OqwBi" id="4R0titEVw44" role="33vP2m">
               <node concept="2Sf5sV" id="4R0titEVvT_" role="2Oq$k0" />
               <node concept="1_qnLN" id="4R0titEVwew" role="2OqNvi">
-                <ref role="1_rbq0" to="n5tj:1dDSgAZqbbq" resolve="SubtractionExpression" />
+                <ref role="1_rbq0" to="n5tj:1dDSgAZqbbq" resolve="MinusExpression" />
               </node>
             </node>
           </node>
@@ -708,7 +708,7 @@
               <node concept="2Sf5sV" id="4R0titEVuWH" role="2Oq$k0" />
               <node concept="1mIQ4w" id="4R0titEVvlK" role="2OqNvi">
                 <node concept="chp4Y" id="4R0titEVvoA" role="cj9EA">
-                  <ref role="cht4Q" to="n5tj:1dDSgAZqbbq" resolve="SubtractionExpression" />
+                  <ref role="cht4Q" to="n5tj:1dDSgAZqbbq" resolve="MinusExpression" />
                 </node>
               </node>
             </node>
