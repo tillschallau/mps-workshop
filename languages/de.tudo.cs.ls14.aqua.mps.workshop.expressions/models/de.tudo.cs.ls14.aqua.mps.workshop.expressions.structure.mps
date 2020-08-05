@@ -262,6 +262,9 @@
     <property role="TrG5h" value="IntVariable" />
     <property role="R4oN_" value="&lt;var&gt; int" />
     <ref role="1TJDcQ" node="3hyw0iIEYgz" resolve="ArithmeticExpression" />
+    <node concept="PrWs8" id="66ATIhpmkEx" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
 </model>
 
