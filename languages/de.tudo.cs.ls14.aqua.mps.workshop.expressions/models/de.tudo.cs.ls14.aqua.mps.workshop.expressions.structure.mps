@@ -128,7 +128,6 @@
   <node concept="1TIwiD" id="1dDSgAZq8vE">
     <property role="EcuMT" value="1398896591257503722" />
     <property role="TrG5h" value="BinaryBooleanExpression" />
-    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="3hyw0iIEYg$" resolve="BooleanExpression" />
     <node concept="1TJgyj" id="1dDSgAZq8ba" role="1TKVEi">
       <property role="IQ2ns" value="1398896591257502410" />
@@ -160,7 +159,6 @@
   <node concept="1TIwiD" id="1dDSgAZqakS">
     <property role="EcuMT" value="1398896591257511224" />
     <property role="TrG5h" value="BinaryArithmeticExpression" />
-    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="3hyw0iIEYgz" resolve="ArithmeticExpression" />
     <node concept="1TJgyj" id="1dDSgAZqakT" role="1TKVEi">
       <property role="IQ2ns" value="1398896591257511225" />
@@ -210,7 +208,6 @@
   <node concept="1TIwiD" id="1dDSgAZqg6a">
     <property role="EcuMT" value="1398896591257534858" />
     <property role="TrG5h" value="CompareExpression" />
-    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="3hyw0iIEYg$" resolve="BooleanExpression" />
     <node concept="1TJgyj" id="1dDSgAZqg6b" role="1TKVEi">
       <property role="IQ2ns" value="1398896591257534859" />
