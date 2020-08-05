@@ -30,14 +30,6 @@
       <concept id="1398896591257511223" name="de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure.AdditionExpression" flags="ng" index="2G0kgY" />
       <concept id="1398896591257514714" name="de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure.SubtractionExpression" flags="ng" index="2G0lfj" />
       <concept id="1398896591257514716" name="de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure.DivExpression" flags="ng" index="2G0lfl" />
-      <concept id="1398896591257502409" name="de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure.AndExpression" flags="ng" index="2G0mf0" />
-      <concept id="1398896591257503722" name="de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure.BinaryBooleanExpression" flags="ng" index="2G0mrz">
-        <child id="1398896591257502410" name="left" index="2G0mf3" />
-        <child id="1398896591257502412" name="right" index="2G0mf5" />
-      </concept>
-      <concept id="1398896591257501244" name="de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure.BoolConstant" flags="ng" index="2G0pWP">
-        <property id="1398896591257501245" name="constant" index="2G0pWO" />
-      </concept>
       <concept id="1398896591257459219" name="de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure.IntConstant" flags="ng" index="2G3zGq">
         <property id="1398896591257459220" name="constant" index="2G3zGt" />
       </concept>
@@ -67,29 +59,6 @@
           <node concept="2G3zGq" id="66ATIhphY4B" role="2G0kgM">
             <property role="2G3zGt" value="5" />
           </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="2qMmg_" id="66ATIhpjpXo">
-    <node concept="2qMmgA" id="66ATIhpjAJv" role="2G0pGk">
-      <property role="TrG5h" value="test" />
-      <node concept="2G0mf0" id="66ATIhpkir3" role="2G0nwO">
-        <node concept="2G0if3" id="66ATIhpkiqR" role="2G0mf3">
-          <node concept="2G0kgY" id="66ATIhpjNuH" role="2G0e22">
-            <node concept="2G3zGq" id="66ATIhpjNuQ" role="2G0kgK">
-              <property role="2G3zGt" value="12" />
-            </node>
-            <node concept="2G3zGq" id="66ATIhpjNuS" role="2G0kgM">
-              <property role="2G3zGt" value="34" />
-            </node>
-          </node>
-          <node concept="2G3zGq" id="66ATIhpkiqZ" role="2G0e24">
-            <property role="2G3zGt" value="23" />
-          </node>
-        </node>
-        <node concept="2G0pWP" id="66ATIhpkirf" role="2G0mf5">
-          <property role="2G0pWO" value="true" />
         </node>
       </node>
     </node>
