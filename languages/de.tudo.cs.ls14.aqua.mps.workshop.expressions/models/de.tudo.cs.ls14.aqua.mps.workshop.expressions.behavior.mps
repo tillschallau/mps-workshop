@@ -160,6 +160,10 @@
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
+      <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
+        <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
+        <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
+      </concept>
       <concept id="1139613262185" name="jetbrains.mps.lang.smodel.structure.Node_GetParentOperation" flags="nn" index="1mfA1w" />
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
@@ -167,6 +171,7 @@
       <concept id="1140131837776" name="jetbrains.mps.lang.smodel.structure.Node_ReplaceWithAnotherOperation" flags="nn" index="1P9Npp">
         <child id="1140131861877" name="replacementNode" index="1P9ThW" />
       </concept>
+      <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI" />
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
       </concept>
@@ -944,6 +949,136 @@
             <node concept="2qgKlT" id="66ATIhppRNf" role="2OqNvi">
               <ref role="37wK5l" node="66ATIhpo5n0" resolve="getVariables" />
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="66ATIhp$EdP" role="13h7CS">
+      <property role="TrG5h" value="getIntVariables" />
+      <node concept="3Tm1VV" id="66ATIhp$EdQ" role="1B3o_S" />
+      <node concept="_YKpA" id="66ATIhp$Exn" role="3clF45">
+        <node concept="3Tqbb2" id="66ATIhp$ExO" role="_ZDj9">
+          <ref role="ehGHo" to="n5tj:66ATIhplrQt" resolve="IntVariable" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="66ATIhp$EdS" role="3clF47">
+        <node concept="3cpWs6" id="66ATIhp$L5B" role="3cqZAp">
+          <node concept="2OqwBi" id="66ATIhp$RGx" role="3cqZAk">
+            <node concept="2OqwBi" id="66ATIhp$QrC" role="2Oq$k0">
+              <node concept="2OqwBi" id="66ATIhp$O8h" role="2Oq$k0">
+                <node concept="BsUDl" id="66ATIhp$L63" role="2Oq$k0">
+                  <ref role="37wK5l" node="66ATIhppRb1" resolve="getVariables" />
+                </node>
+                <node concept="3zZkjj" id="66ATIhp$P34" role="2OqNvi">
+                  <node concept="1bVj0M" id="66ATIhp$P36" role="23t8la">
+                    <node concept="3clFbS" id="66ATIhp$P37" role="1bW5cS">
+                      <node concept="3clFbF" id="66ATIhp$Pc8" role="3cqZAp">
+                        <node concept="2OqwBi" id="66ATIhp$Pu3" role="3clFbG">
+                          <node concept="37vLTw" id="66ATIhp$Pc7" role="2Oq$k0">
+                            <ref role="3cqZAo" node="66ATIhp$P38" resolve="it" />
+                          </node>
+                          <node concept="1mIQ4w" id="66ATIhp$PNJ" role="2OqNvi">
+                            <node concept="chp4Y" id="66ATIhp$QaT" role="cj9EA">
+                              <ref role="cht4Q" to="n5tj:66ATIhplrQt" resolve="IntVariable" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="66ATIhp$P38" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="66ATIhp$P39" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3$u5V9" id="66ATIhp$QPi" role="2OqNvi">
+                <node concept="1bVj0M" id="66ATIhp$QPk" role="23t8la">
+                  <node concept="3clFbS" id="66ATIhp$QPl" role="1bW5cS">
+                    <node concept="3clFbF" id="66ATIhp$R1B" role="3cqZAp">
+                      <node concept="1PxgMI" id="66ATIhp$Rgg" role="3clFbG">
+                        <node concept="chp4Y" id="66ATIhp$Rnv" role="3oSUPX">
+                          <ref role="cht4Q" to="n5tj:66ATIhplrQt" resolve="IntVariable" />
+                        </node>
+                        <node concept="37vLTw" id="66ATIhp$R1A" role="1m5AlR">
+                          <ref role="3cqZAo" node="66ATIhp$QPm" resolve="it" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="Rh6nW" id="66ATIhp$QPm" role="1bW2Oz">
+                    <property role="TrG5h" value="it" />
+                    <node concept="2jxLKc" id="66ATIhp$QPn" role="1tU5fm" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="ANE8D" id="66ATIhp$S8_" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="66ATIhp$Sgy" role="13h7CS">
+      <property role="TrG5h" value="getBoolVariables" />
+      <node concept="3Tm1VV" id="66ATIhp$Sgz" role="1B3o_S" />
+      <node concept="_YKpA" id="66ATIhp$SN0" role="3clF45">
+        <node concept="3Tqbb2" id="66ATIhp$SNa" role="_ZDj9">
+          <ref role="ehGHo" to="n5tj:66ATIhplrQr" resolve="BoolVariable" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="66ATIhp$Sg_" role="3clF47">
+        <node concept="3cpWs6" id="66ATIhp$SNO" role="3cqZAp">
+          <node concept="2OqwBi" id="66ATIhp$SNP" role="3cqZAk">
+            <node concept="2OqwBi" id="66ATIhp$SNQ" role="2Oq$k0">
+              <node concept="2OqwBi" id="66ATIhp$SNR" role="2Oq$k0">
+                <node concept="BsUDl" id="66ATIhp$SNS" role="2Oq$k0">
+                  <ref role="37wK5l" node="66ATIhppRb1" resolve="getVariables" />
+                </node>
+                <node concept="3zZkjj" id="66ATIhp$SNT" role="2OqNvi">
+                  <node concept="1bVj0M" id="66ATIhp$SNU" role="23t8la">
+                    <node concept="3clFbS" id="66ATIhp$SNV" role="1bW5cS">
+                      <node concept="3clFbF" id="66ATIhp$SNW" role="3cqZAp">
+                        <node concept="2OqwBi" id="66ATIhp$SNX" role="3clFbG">
+                          <node concept="37vLTw" id="66ATIhp$SNY" role="2Oq$k0">
+                            <ref role="3cqZAo" node="66ATIhp$SO1" resolve="it" />
+                          </node>
+                          <node concept="1mIQ4w" id="66ATIhp$SNZ" role="2OqNvi">
+                            <node concept="chp4Y" id="66ATIhp$TG5" role="cj9EA">
+                              <ref role="cht4Q" to="n5tj:66ATIhplrQr" resolve="BoolVariable" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="66ATIhp$SO1" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="66ATIhp$SO2" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3$u5V9" id="66ATIhp$SO3" role="2OqNvi">
+                <node concept="1bVj0M" id="66ATIhp$SO4" role="23t8la">
+                  <node concept="3clFbS" id="66ATIhp$SO5" role="1bW5cS">
+                    <node concept="3clFbF" id="66ATIhp$SO6" role="3cqZAp">
+                      <node concept="1PxgMI" id="66ATIhp$SO7" role="3clFbG">
+                        <node concept="37vLTw" id="66ATIhp$SO9" role="1m5AlR">
+                          <ref role="3cqZAo" node="66ATIhp$SOa" resolve="it" />
+                        </node>
+                        <node concept="chp4Y" id="66ATIhp$T$5" role="3oSUPX">
+                          <ref role="cht4Q" to="n5tj:66ATIhplrQr" resolve="BoolVariable" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="Rh6nW" id="66ATIhp$SOa" role="1bW2Oz">
+                    <property role="TrG5h" value="it" />
+                    <node concept="2jxLKc" id="66ATIhp$SOb" role="1tU5fm" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="ANE8D" id="66ATIhp$SOc" role="2OqNvi" />
           </node>
         </node>
       </node>
