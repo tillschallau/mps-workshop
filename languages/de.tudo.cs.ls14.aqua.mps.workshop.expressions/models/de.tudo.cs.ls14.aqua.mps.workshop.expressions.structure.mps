@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -55,6 +56,9 @@
       <property role="20kJfa" value="functions" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="3hyw0iIEYgy" resolve="Function" />
+    </node>
+    <node concept="PrWs8" id="66ATIhplFlu" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
     </node>
   </node>
   <node concept="1TIwiD" id="3hyw0iIEYgy">
@@ -243,6 +247,19 @@
     <property role="TrG5h" value="LessEqualExpression" />
     <property role="R4oN_" value="&lt;left&gt; &lt;= &lt;right&gt;" />
     <ref role="1TJDcQ" node="1dDSgAZqg6a" resolve="CompareExpression" />
+  </node>
+  <node concept="1TIwiD" id="66ATIhplrQr">
+    <property role="EcuMT" value="7036565336238701979" />
+    <property role="TrG5h" value="BoolVariable" />
+    <ref role="1TJDcQ" node="3hyw0iIEYg$" resolve="BooleanExpression" />
+    <node concept="PrWs8" id="66ATIhplrQs" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="66ATIhplrQt">
+    <property role="EcuMT" value="7036565336238701981" />
+    <property role="TrG5h" value="IntVariable" />
+    <ref role="1TJDcQ" node="3hyw0iIEYgz" resolve="ArithmeticExpression" />
   </node>
 </model>
 
