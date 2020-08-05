@@ -146,7 +146,7 @@
   </node>
   <node concept="1TIwiD" id="1dDSgAZqakR">
     <property role="EcuMT" value="1398896591257511223" />
-    <property role="TrG5h" value="AdditionExpression" />
+    <property role="TrG5h" value="PlusExpression" />
     <property role="R4oN_" value="&lt;left&gt; + &lt;right&gt;" />
     <ref role="1TJDcQ" node="1dDSgAZqakS" resolve="BinaryArithmeticExpression" />
   </node>
@@ -172,7 +172,7 @@
   </node>
   <node concept="1TIwiD" id="1dDSgAZqbbq">
     <property role="EcuMT" value="1398896591257514714" />
-    <property role="TrG5h" value="SubtractionExpression" />
+    <property role="TrG5h" value="MinusExpression" />
     <property role="R4oN_" value="&lt;left&gt; - &lt;right&gt;" />
     <ref role="1TJDcQ" node="1dDSgAZqakS" resolve="BinaryArithmeticExpression" />
   </node>
