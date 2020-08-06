@@ -1857,30 +1857,5 @@
       <node concept="3Tm1VV" id="66ATIhp_QDv" role="1B3o_S" />
     </node>
   </node>
-  <node concept="13MO4I" id="66ATIhpDJ7l">
-    <property role="TrG5h" value="reduce_IntVariableDeclaration" />
-    <ref role="3gUMe" to="n5tj:66ATIhplrQt" resolve="IntVariable" />
-    <node concept="3cpWsn" id="66ATIhpDJ7L" role="13RCb5">
-      <property role="TrG5h" value="x" />
-      <node concept="10Oyi0" id="66ATIhpDJ7R" role="1tU5fm" />
-      <node concept="raruj" id="66ATIhpDJ82" role="lGtFl" />
-      <node concept="17Uvod" id="66ATIhpDJ83" role="lGtFl">
-        <property role="2qtEX9" value="name" />
-        <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-        <node concept="3zFVjK" id="66ATIhpDJ84" role="3zH0cK">
-          <node concept="3clFbS" id="66ATIhpDJ85" role="2VODD2">
-            <node concept="3clFbF" id="66ATIhpDJcH" role="3cqZAp">
-              <node concept="2OqwBi" id="66ATIhpDJqX" role="3clFbG">
-                <node concept="30H73N" id="66ATIhpDJcG" role="2Oq$k0" />
-                <node concept="3TrcHB" id="66ATIhpDJBK" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
 </model>
 
