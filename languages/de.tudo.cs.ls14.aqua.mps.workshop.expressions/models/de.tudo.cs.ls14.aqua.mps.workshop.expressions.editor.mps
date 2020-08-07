@@ -89,7 +89,7 @@
         <ref role="1NtTu8" to="n5tj:1dDSgAZq8ba" resolve="left" />
       </node>
       <node concept="3F0ifn" id="1fsPgcbyAfY" role="3EZMnx">
-        <property role="3F0ifm" value="and" />
+        <property role="3F0ifm" value="&amp;&amp;" />
       </node>
       <node concept="3F1sOY" id="1fsPgcbyAg6" role="3EZMnx">
         <ref role="1NtTu8" to="n5tj:1dDSgAZq8bc" resolve="right" />
@@ -374,7 +374,7 @@
         <ref role="1NtTu8" to="n5tj:1dDSgAZq8ba" resolve="left" />
       </node>
       <node concept="3F0ifn" id="1fsPgcbyDw9" role="3EZMnx">
-        <property role="3F0ifm" value="or" />
+        <property role="3F0ifm" value="||" />
       </node>
       <node concept="3F1sOY" id="1fsPgcbyDwp" role="3EZMnx">
         <ref role="1NtTu8" to="n5tj:1dDSgAZq8bc" resolve="right" />
