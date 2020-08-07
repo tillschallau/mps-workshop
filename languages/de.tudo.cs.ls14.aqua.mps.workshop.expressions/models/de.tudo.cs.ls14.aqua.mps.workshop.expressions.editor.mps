@@ -500,6 +500,24 @@
       <node concept="l2Vlx" id="1fsPgcbz6D2" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="66ATIhpmkDt">
+    <ref role="1XX52x" to="n5tj:66ATIhplrQr" resolve="BoolVariable" />
+    <node concept="3EZMnI" id="66ATIhpmkDv" role="2wV5jI">
+      <node concept="l2Vlx" id="66ATIhpmkDy" role="2iSdaV" />
+      <node concept="3F0A7n" id="4X3Ov$_Uwcs" role="3EZMnx">
+        <ref role="1NtTu8" to="n5tj:4X3Ov$_UtTX" resolve="name" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="66ATIhpmlF$">
+    <ref role="1XX52x" to="n5tj:66ATIhplrQt" resolve="IntVariable" />
+    <node concept="3EZMnI" id="66ATIhpmlFA" role="2wV5jI">
+      <node concept="l2Vlx" id="66ATIhpmlFD" role="2iSdaV" />
+      <node concept="3F0A7n" id="4X3Ov$_Uwcq" role="3EZMnx">
+        <ref role="1NtTu8" to="n5tj:4X3Ov$_UtTX" resolve="name" />
+      </node>
+    </node>
+  </node>
   <node concept="3ICUPy" id="5CJr5lt4ExW">
     <ref role="aqKnT" to="n5tj:3hyw0iIEYg$" resolve="BooleanExpression" />
     <node concept="1Qtc8_" id="5CJr5lt3AP1" role="IW6Ez">
@@ -1422,24 +1440,6 @@
           </node>
         </node>
       </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="66ATIhpmkDt">
-    <ref role="1XX52x" to="n5tj:66ATIhplrQr" resolve="BoolVariable" />
-    <node concept="3EZMnI" id="66ATIhpmkDv" role="2wV5jI">
-      <node concept="3F0A7n" id="66ATIhpmkDz" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="l2Vlx" id="66ATIhpmkDy" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="66ATIhpmlF$">
-    <ref role="1XX52x" to="n5tj:66ATIhplrQt" resolve="IntVariable" />
-    <node concept="3EZMnI" id="66ATIhpmlFA" role="2wV5jI">
-      <node concept="3F0A7n" id="66ATIhpmlFE" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="l2Vlx" id="66ATIhpmlFD" role="2iSdaV" />
     </node>
   </node>
 </model>
