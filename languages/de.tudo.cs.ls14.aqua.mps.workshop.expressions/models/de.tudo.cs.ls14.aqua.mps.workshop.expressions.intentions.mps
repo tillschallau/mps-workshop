@@ -8,7 +8,6 @@
   <imports>
     <import index="n5tj" ref="r:e90653f4-fb78-4858-812e-e12bc87a31b0(de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure)" implicit="true" />
     <import index="pxwn" ref="r:70c13cc5-6d43-4439-8901-93c1b7cc3cda(de.tudo.cs.ls14.aqua.mps.workshop.expressions.behavior)" implicit="true" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -1423,8 +1422,8 @@
               <node concept="37vLTw" id="66ATIhpnW7X" role="2Oq$k0">
                 <ref role="3cqZAo" node="66ATIhpnW5L" resolve="newNode" />
               </node>
-              <node concept="3TrcHB" id="66ATIhpnWt7" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              <node concept="3TrcHB" id="4X3Ov$_VEi5" role="2OqNvi">
+                <ref role="3TsBF5" to="n5tj:4X3Ov$_UtTX" resolve="name" />
               </node>
             </node>
             <node concept="37vLTw" id="66ATIhpry4c" role="37vLTx">
@@ -1504,8 +1503,8 @@
               <node concept="37vLTw" id="66ATIhps6HY" role="2Oq$k0">
                 <ref role="3cqZAo" node="66ATIhps6HQ" resolve="newNode" />
               </node>
-              <node concept="3TrcHB" id="66ATIhps6HZ" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              <node concept="3TrcHB" id="4X3Ov$_VEEu" role="2OqNvi">
+                <ref role="3TsBF5" to="n5tj:4X3Ov$_UtTX" resolve="name" />
               </node>
             </node>
             <node concept="37vLTw" id="66ATIhps6I0" role="37vLTx">
