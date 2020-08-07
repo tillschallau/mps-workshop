@@ -8,8 +8,8 @@
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="n5tj" ref="r:e90653f4-fb78-4858-812e-e12bc87a31b0(de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure)" />
     <import index="cj4x" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.openapi.editor(MPS.Editor/)" />
+    <import index="n5tj" ref="r:e90653f4-fb78-4858-812e-e12bc87a31b0(de.tudo.cs.ls14.aqua.mps.workshop.expressions.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -1223,8 +1223,8 @@
                         <node concept="37vLTw" id="66ATIhps9FA" role="2Oq$k0">
                           <ref role="3cqZAo" node="66ATIhps9FC" resolve="it" />
                         </node>
-                        <node concept="3TrcHB" id="66ATIhps9FB" role="2OqNvi">
-                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                        <node concept="3TrcHB" id="4X3Ov$_Viyw" role="2OqNvi">
+                          <ref role="3TsBF5" to="n5tj:4X3Ov$_UtTX" resolve="name" />
                         </node>
                       </node>
                     </node>
@@ -1567,8 +1567,8 @@
                         <node concept="37vLTw" id="66ATIhpq8KA" role="2Oq$k0">
                           <ref role="3cqZAo" node="66ATIhpq8D2" resolve="it" />
                         </node>
-                        <node concept="3TrcHB" id="66ATIhpq9fR" role="2OqNvi">
-                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                        <node concept="3TrcHB" id="4X3Ov$_Vhnl" role="2OqNvi">
+                          <ref role="3TsBF5" to="n5tj:4X3Ov$_UtTX" resolve="name" />
                         </node>
                       </node>
                     </node>
