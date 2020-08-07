@@ -1,0 +1,9 @@
+image: nopreserveroot/texlive-full
+
+build:
+  script:
+    - cd latex-code/exercise
+    - latexmk -pdf exercise
+  artifacts:
+    paths:
+      - latex-code/exercise/exercise.pdf
