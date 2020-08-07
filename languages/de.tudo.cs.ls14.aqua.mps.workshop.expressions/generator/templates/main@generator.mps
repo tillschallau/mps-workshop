@@ -11,8 +11,8 @@
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="pxwn" ref="r:70c13cc5-6d43-4439-8901-93c1b7cc3cda(de.tudo.cs.ls14.aqua.mps.workshop.expressions.behavior)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -572,8 +572,8 @@
                   <node concept="3clFbF" id="66ATIhpC85k" role="3cqZAp">
                     <node concept="2OqwBi" id="66ATIhpC8or" role="3clFbG">
                       <node concept="30H73N" id="66ATIhpC85j" role="2Oq$k0" />
-                      <node concept="3TrcHB" id="66ATIhpC8QT" role="2OqNvi">
-                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                      <node concept="3TrcHB" id="4X3Ov$_YW8M" role="2OqNvi">
+                        <ref role="3TsBF5" to="n5tj:4X3Ov$_UtTX" resolve="name" />
                       </node>
                     </node>
                   </node>
@@ -613,8 +613,8 @@
                 <node concept="3clFbS" id="66ATIhpCaPQ" role="2VODD2">
                   <node concept="3clFbF" id="66ATIhpCaPW" role="3cqZAp">
                     <node concept="2OqwBi" id="66ATIhpCaPR" role="3clFbG">
-                      <node concept="3TrcHB" id="66ATIhpCaPU" role="2OqNvi">
-                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                      <node concept="3TrcHB" id="4X3Ov$_YWPv" role="2OqNvi">
+                        <ref role="3TsBF5" to="n5tj:4X3Ov$_UtTX" resolve="name" />
                       </node>
                       <node concept="30H73N" id="66ATIhpCaPV" role="2Oq$k0" />
                     </node>
@@ -677,8 +677,8 @@
                                 <node concept="3clFbF" id="66ATIhpEKsK" role="3cqZAp">
                                   <node concept="2OqwBi" id="66ATIhpEKDp" role="3clFbG">
                                     <node concept="30H73N" id="66ATIhpEKsJ" role="2Oq$k0" />
-                                    <node concept="3TrcHB" id="66ATIhpEL8W" role="2OqNvi">
-                                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                                    <node concept="3TrcHB" id="4X3Ov$_YXs1" role="2OqNvi">
+                                      <ref role="3TsBF5" to="n5tj:4X3Ov$_UtTX" resolve="name" />
                                     </node>
                                   </node>
                                 </node>
@@ -775,8 +775,8 @@
                                 <node concept="3clFbF" id="66ATIhpELmL" role="3cqZAp">
                                   <node concept="2OqwBi" id="66ATIhpELmM" role="3clFbG">
                                     <node concept="30H73N" id="66ATIhpELmN" role="2Oq$k0" />
-                                    <node concept="3TrcHB" id="66ATIhpELmO" role="2OqNvi">
-                                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                                    <node concept="3TrcHB" id="4X3Ov$_YY8W" role="2OqNvi">
+                                      <ref role="3TsBF5" to="n5tj:4X3Ov$_UtTX" resolve="name" />
                                     </node>
                                   </node>
                                 </node>
