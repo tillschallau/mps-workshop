@@ -121,7 +121,7 @@
   <node concept="1TIwiD" id="1dDSgAZq8b9">
     <property role="EcuMT" value="1398896591257502409" />
     <property role="TrG5h" value="AndExpression" />
-    <property role="R4oN_" value="&lt;left&gt; and &lt;right&gt;" />
+    <property role="R4oN_" value="&lt;left&gt; &amp;&amp; &lt;right&gt;" />
     <ref role="1TJDcQ" node="1dDSgAZq8vE" resolve="BinaryBooleanExpression" />
   </node>
   <node concept="1TIwiD" id="1dDSgAZq8vE">
@@ -147,7 +147,7 @@
   <node concept="1TIwiD" id="1dDSgAZq8PB">
     <property role="EcuMT" value="1398896591257505127" />
     <property role="TrG5h" value="OrExpression" />
-    <property role="R4oN_" value="&lt;left&gt; or &lt;right&gt;" />
+    <property role="R4oN_" value="&lt;left&gt; || &lt;right&gt;" />
     <ref role="1TJDcQ" node="1dDSgAZq8vE" resolve="BinaryBooleanExpression" />
   </node>
   <node concept="1TIwiD" id="1dDSgAZqakR">
