@@ -592,7 +592,7 @@
           <node concept="3clFbS" id="5CJr5lt3APg" role="2VODD2">
             <node concept="3clFbF" id="5CJr5lt3AU1" role="3cqZAp">
               <node concept="Xl_RD" id="5CJr5lt3AU0" role="3clFbG">
-                <property role="Xl_RC" value="and" />
+                <property role="Xl_RC" value="&amp;&amp;" />
               </node>
             </node>
           </node>
@@ -623,7 +623,7 @@
           <node concept="3clFbS" id="5CJr5lt7bc0" role="2VODD2">
             <node concept="3clFbF" id="5CJr5lt7bhF" role="3cqZAp">
               <node concept="Xl_RD" id="5CJr5lt7bhE" role="3clFbG">
-                <property role="Xl_RC" value="or" />
+                <property role="Xl_RC" value="||" />
               </node>
             </node>
           </node>
@@ -661,7 +661,7 @@
           <node concept="3clFbS" id="5CJr5lt3XwG" role="2VODD2">
             <node concept="3clFbF" id="5CJr5lt3Xxg" role="3cqZAp">
               <node concept="Xl_RD" id="5CJr5lt3Xxf" role="3clFbG">
-                <property role="Xl_RC" value="and" />
+                <property role="Xl_RC" value="&amp;&amp;" />
               </node>
             </node>
           </node>
@@ -692,7 +692,7 @@
           <node concept="3clFbS" id="5CJr5lt7kYY" role="2VODD2">
             <node concept="3clFbF" id="5CJr5lt7l0s" role="3cqZAp">
               <node concept="Xl_RD" id="5CJr5lt7l0r" role="3clFbG">
-                <property role="Xl_RC" value="or" />
+                <property role="Xl_RC" value="||" />
               </node>
             </node>
           </node>
