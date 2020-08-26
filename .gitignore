@@ -319,4 +319,8 @@ TSWLatexianTemp*
 *.xmpdata
 *.xmpi
 
+# Include PDFs of TikzEdt
+!**/tikz/*.pdf
+**/tikz/*.preview.pdf
+
 
