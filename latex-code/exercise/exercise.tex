@@ -122,6 +122,19 @@
    }
   \makeatother
   \renewcommand{\sectfont}{\normalfont}       % aendert den Font fuer Ueberschriften
+  
+  \newcommand{\workshoplanguage}[1]{\includegraphics[height=6px]{graphics/language.png} de.tudo.cs.ls14.aqua.mps.workshop.#1}
+  
+  \newcommand{\workshoplanguagecreation}[0]{\includegraphics[height=6px]{graphics/language.png} Language}
+  \newcommand{\workshopsolution}[1]{\includegraphics[height=6px]{graphics/solution.png} de.tudo.cs.ls14.aqua.mps.workshop.#1}
+  \newcommand{\workshopmodel}[1]{\includegraphics[height=6px]{graphics/model.png} #1}
+  \newcommand{\workshopnode}[1]{\includegraphics[height=6px]{graphics/node.png} #1}
+  \newcommand{\workshopproject}[0]{\includegraphics[height=6px]{graphics/project.png} mps-workshop}
+  \newcommand{\workshoprun}[0]{\includegraphics[height=6px]{graphics/run.png} Run 'Node de.tudo.cs.ls14...'}
+  \newcommand{\workshopmoduleproperties}[0]{\includegraphics[height=6px]{graphics/properties.png} Module Properties}
+  \newcommand{\workshopruntime}[0]{\includegraphics[height=6px]{graphics/runtime.png} Runtime}
+  \newcommand{\workshopversion}[0]{\menu{\includegraphics[height=6px]{graphics/version.png} Get from Version Control}}
+  \newcommand{\workshopinspector}[0]{\includegraphics[height=6px]{graphics/inspector.png} Inspector}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Anfang des eigentlichen Dokuments
@@ -135,33 +148,46 @@
 
   The following exercise are designed to give you an in-depth understanding for the creation of languages using the MPS language workbench.
   
-  \section{Setup}
+  \section{Setup - Console}
   
   \begin{enumerate}
   	\item Download the latest version of MPS for your operating system from \\ \url{https://www.jetbrains.com/de-de/mps/download/}
   	\item Clone the \textit{mps-workshop} repository using \\
   	\url{git@aqua-scm.cs.tu-dortmund.de:aqua/mps-workshop.git} or\\
   	\url{https://aqua-scm.cs.tu-dortmund.de/aqua/mps-workshop.git}
-  	\item Open the project in MPS \texttt{File} $\rightarrow$ \texttt{Open}
-  	\item When prompted: \textit{migrate} the project
-  	\item Right-click on \texttt{mps-workshop} and select \texttt{Rebuild project}
+  	\item Open the project in MPS with \menu[,]{File, Open}
+  	\item When prompted: \menu{migrate} the project
+  	\item Right-click on the language \menu[,]{\workshoplanguage{java},Rebuild Language} to make the language available for the sandbox solution
+  	\item Right-click on the project \menu[,]{\workshopproject, Rebuild project}
+  \end{enumerate}
+
+  \section{Setup - IDE}
+  
+  \begin{enumerate}
+  	\item Download the latest version of MPS for your operating system from \\ \url{https://www.jetbrains.com/de-de/mps/download/}
+  	\item Open MPS
+  	\item Select \workshopversion
+  	\item Enter \url{https://aqua-scm.cs.tu-dortmund.de/aqua/mps-workshop.git} into the \menu{URL} field, select a directory and press \menu{clone}
+  	\item When prompted: \menu{migrate} the project
+  	\item Right-click on the language \menu[,]{\workshoplanguage{java},Rebuild Language} to make the language available for the sandbox solution
+  	\item Right-click on the project \menu[,]{\workshopproject, Rebuild project}
   \end{enumerate}
 
   \section{MPS Hands-On}
   
   These exercises are designed to give you a feeling of how the projectional editor of MPS is working. For the following tasks, work on the \menu{$\hookrightarrow$  master} branch.
-  Navigate to the \texttt{sandbox}-model and create a new \texttt{JavaInMPSTest}-node as shown in Figure \ref{fig:sandbox}.
+  Navigate to the model \menu{\workshopmodel{sandbox}} under the solution \menu{\workshopsolution{java}} and create a new \menu{\workshopnode{JavaInMPSTest}} node as shown in Figure \ref{fig:sandbox}.
   \begin{figure}[h]
   	\centering
   	\includegraphics[width=\textwidth]{graphics/sandbox.png}  
-  	\caption{Navigation menu for creation of a new \texttt{JavaInMPSTest}-node}
+  	\caption{Navigation menu for creation of a new \menu{\workshopnode{JavaInMPSTest}} node}
   	\label{fig:sandbox}	
   \end{figure}
 
   \begin{aufgabe}
-  	Implement the code shown in Listing \ref{lst:read-name} in your \texttt{JavaInMPSTest}-node. Notice the change in the predefined code fragment while editing the name of the method. After completion rebuild the model by right-clicking onto \menu[,]{sandbox, Rebuild model}. When there are no more syntax and compilation errors, run the code by right-clicking onto \menu[,]{JavaInMPSTest, Run node}.\\
+  	Implement the code shown in Listing \ref{lst:read-name} in your \menu{\workshopnode{JavaInMPSTest}} node. Notice the change in the predefined code fragment while editing the name of the method. After completion rebuild the model by right-clicking \menu[,]{\workshopmodel{sandbox}, Rebuild model}. When there are no more syntax and compilation errors, run the code by right-clicking onto \menu[,]{\workshopnode{JavaInMPSTest}, \workshoprun}.\\
   	\\
-  	\textbf{Note:} You can check the generated code by right-clicking onto the editor and select \texttt{Preview Generated Text}.
+  	\textbf{Note:} You can check the generated code by right-clicking onto the editor and select \menu{Preview Generated Text}.
   	
   	\begin{lstlisting}[language=Java,caption={Java code to read a line from the console and print the result}, captionpos=b, label={lst:read-name}]
 public static void readLine(){
@@ -180,9 +206,9 @@ public static void readLine(){
   \end{aufgabe}
 
   \begin{aufgabe}
-  	Be creative! Add a new \texttt{JavaInMPSTest}-node and add your own code.\\
+  	Be creative! Add a new \menu{\workshopnode{JavaInMPSTest}} node and add your own code.\\
   	\\
-  	\textbf{Note:} If your desired class does not exist in your current context, you can add \textit{Accessories Models} by right-clicking onto \menu[,]{de.tudo.cs.ls14.aqua.mps.workshop.java, Module Properties}. Navigate to \menu[,]{Runtime, Accessories Models} and add the required models using the \texttt{+} button, e.g. \textit{java.io@java\_stub}.
+  	\textbf{Note:} If your desired package does not exist in your current context, you can add \textit{Accessories Models} by right-clicking the language \menu[,]{\workshoplanguage{java}, \workshopmoduleproperties}. Navigate to \menu[,]{\workshopruntime, Accessories Models} and add the required models using the \menu{+} button, e.g. \menu{\texttt{\workshopmodel{java.time@java\_stub}}}. You have to rebuild the language \menu[,]{\workshoplanguage{java}, Rebuild Language} to apply your change.
   \end{aufgabe}
 
 	\section{Expressions}
@@ -191,12 +217,12 @@ public static void readLine(){
 	
 	\begin{aufgabe}
 		Create a new language named \\
-		\texttt{de.tudo.cs.ls14.aqua.mps.workshop.expressions} by right-clicking onto\\ \menu[,]{mps-workshop, New, Language}. Check the \texttt{Create Sandbox Solution} in the process.
+		\texttt{de.tudo.cs.ls14.aqua.mps.workshop.expressions} by right-clicking onto\\ \menu[,]{\workshopproject, New, \workshoplanguagecreation}. Check the \menu{Create Sandbox Solution} in the process. You have to build the language \menu[,]{\workshoplanguage{expressions}, Rebuild Language} to remove errors.
 	\end{aufgabe}
 
 	\begin{aufgabe}
 		Translate the BNF of Table \ref{table:bnf} into concepts. You may use abstract concepts to simplify the task and add internal structure.\\
-		Give each concept a meaningful name and short description.
+		Give each concept a meaningful \textbf{name} and \textbf{short description}.
 		\begin{table}
 			\begin{tabular}{ l r l }
 				Class & ::= & Function*\\
@@ -238,7 +264,7 @@ public static void readLine(){
 	\begin{aufgabe}
 		Add editors for your concepts, such that the order of operations is clearly visible.\\
 		\\
-		\textbf{Note:} For some visual modifications you may need the \menu{Inspector}. To show it, click on the respective button in the lower right corner of your IDE.
+		\textbf{Note:} For some visual modifications you may need the \menu{\workshopinspector}. To show it, click on the respective button in the lower right corner of your IDE.
 	\end{aufgabe}
 
 	Intermediate solution: \menu{$\hookrightarrow$ expression-1-editors}
@@ -262,7 +288,12 @@ public static void readLine(){
 	Intermediate solution: \menu{$\hookrightarrow$ expression-4-transformations}
 	
 	\begin{aufgabe}
-		Add generators for at least one of \texttt{AExp} or \texttt{BExp}. Your code construct for the expression \texttt{x >= 2} should look like the following  Listing \ref{lst:gen}. \newpage
+		Add generators for at least one of \texttt{AExp} or \texttt{BExp}. Your code construct for the expression \texttt{x >= 2} should look like the following  Listing \ref{lst:gen}.
+	\end{aufgabe}
+
+	The final solution with all steps can be found under \menu{$\hookrightarrow$ expression-5-generations}
+	
+	\newpage
 		
 		\begin{lstlisting}[language=Java,caption={Generated Java code that parses the variables and returns the result of the defined expression}, captionpos=b, label={lst:gen}]
 package de.tudo.cs.ls14.aqua.mps.workshop.expressions.sandbox;
@@ -291,9 +322,6 @@ public class ExpressionTest {
 	}
 }
 		\end{lstlisting}
-	\end{aufgabe}
-
-	The final solution with all steps can be found under \menu{$\hookrightarrow$ expression-5-generations}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
