@@ -1,0 +1,118 @@
+% arara: lualatex: { shell : yes }
+% arara: lualatex: { shell : yes }
+% arara: biber
+% arara: lualatex: { shell : yes }
+% arara: lualatex: { shell : yes }
+% !TeX document-id = {d42c9162-1096-4f40-8a62-8cb41704ea7c}
+% !TeX spellcheck = en_US
+% !TeX TXS-program:compile = txs:///lualatex/[--shell-escape]
+% !BIB program = biber
+
+\input{header}
+
+% Document content
+\begin{document}
+    \begin{frame}
+        \setcounter{framenumber}{0}
+        \titlepage
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\contentsname}
+        \tableofcontents[hideothersubsections]
+    \end{frame}
+
+    \section{Introduction}
+    
+    \begin{frame}{Meta Programming System}
+    	The \textbf{Meta Programming System} (MPS) \footnote{\url{https://www.jetbrains.com/mps/}} is a language workbench to create \textbf{Domain Specific Languages} (DSL).\\
+    	
+    	MPS uses/provides:
+    	\begin{itemize}
+    		\item Code storage in an \textbf{Abstract Syntax Tree} (AST)
+    		\item Projectional editing
+    		\item Code generation
+    		\item Language extension possibilities
+    	\end{itemize}
+    \end{frame}
+
+	\begin{frame}
+		DSl Landschaft beschreiben (Grafik auf VuC) -> Basis auf AST ohne Parser
+	\end{frame}
+
+	\begin{frame}{Abstract Syntax Tree}
+		MPS is using an AST as its underlying model, therefore no specific parser is necessary.\\
+		
+		The language definition is based on AST-nodes, which build the abstract syntax tree.
+		\begin{center}
+			\includegraphics[height=0.7\textheight]{tikz/ast.pdf}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Projectional Editing}
+		The \textbf{Projectional Editor} of MPS is a visual representation of the current AST. It is possible to have multiple editors with different presentation aspects.
+		\begin{center}
+			\includegraphics[height=0.7\textheight]{tikz/editors.pdf}
+		\end{center}
+	\end{frame}
+
+	\section{Language Design}
+	
+	\begin{frame}{Structure}
+		The structure of a language is defined as a \textbf{Concept}\footnote{\url{https://www.jetbrains.com/help/mps/structure.html}} in MPS\\
+		\begin{minipage}{0.45\textwidth}
+			Concept:
+			\begin{itemize}
+				\item Inheritance
+				\item Implementation of Interface
+				\item Properties:
+				\begin{itemize}
+					\item Enumeration
+					\item Primitive Datatype
+					\item Constrained Datatype
+				\end{itemize}
+				\item Children:
+				\begin{itemize}
+					\item Any concept 
+					\item Multiplicities ([1], [1..n], [0..n], [0..1])
+				\end{itemize}
+				\item References:
+				\begin{itemize}
+					\item Reference to another node
+				\end{itemize}
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.45\textwidth}
+			\includegraphics[height=0.8\textheight]{illustrations/concept.png}
+			%IfStatement als Beispiel%
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{Editor\footnote{\url{https://www.jetbrains.com/help/mps/editor.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Types of Cell Models:
+			\begin{itemize}
+				\item \textbf{Constant cell}: \texttt{<constant>}
+				\item \textbf{Property cell}: \texttt{\{property\}}
+				\item \textbf{Child cell}: \texttt{\%child\%}
+				\item \textbf{Referent cell}: \texttt{(\%reference\%->\{name\})}
+				\item \textbf{Child list cell}: \texttt{(>\%child\%/empty cell: <default><)}
+				\item \textbf{Model access}: \texttt{*model access*}
+				\item \textbf{Collection cell}: \texttt{[- -]} (indent layout) or \\
+				\textcolor{white}{Collection cell: n} \texttt{[> <]} (horizontal) or \\
+				\textcolor{white}{Collection cell: n} \texttt{[/ /]} (vertical) 
+			\end{itemize}
+		\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/editor.png}
+	\end{minipage}
+	\end{frame}
+
+    \section{Literatur}
+
+    \begin{frame}[t, allowframebreaks]
+        \frametitle{Literatur}
+        \printbibliography
+    \end{frame}
+\end{document}
+
