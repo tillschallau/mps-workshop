@@ -1,0 +1,153 @@
+% !TEX root = slides.tex
+
+\documentclass[
+    %draft, % enable for quick rendering
+    9pt,aspectratio=169,usepdftitle=false,
+    %handout, % enable for uncover suppression
+    hyperref={breaklinks},
+    xcolor={svgnames}]{beamer}
+
+% Load used-defined config
+\input{configsupport}
+\input{config}
+
+%%%%%%%%%%%%
+% Packages %
+%%%%%%%%%%%%
+
+% Should go first:
+
+% Font control
+\usepackage{fontspec}
+
+% Math support
+\usepackage{amsmath}
+\usepackage{unicode-math}
+
+% Font selection (needs to go before polyglossia)
+\usepackage{libertinus}
+
+% Language control
+\usepackage{polyglossia}
+\languagesetup
+
+% Date formats
+\usepackage[useregional]{datetime2}
+
+% Algorithms
+\usepackage[linesnumbered, vlined]{algorithm2e}
+
+% Author and title reuse
+\usepackage{authoraftertitle}
+
+% Bibliography
+\usepackage[style=alphabetic]{biblatex}
+
+% Print-quality tables
+\usepackage{booktabs}
+
+% Watermarks for draft versions
+%\usepackage{draftwatermark}
+%\SetWatermarkAngle{57.5}
+%\SetWatermarkLightness{.95}
+%\SetWatermarkText{ENTWURF \(\alpha\).1}
+
+% Image inclusion
+\usepackage{graphicx}
+
+% Enable microtypography support
+\usepackage[final]{microtype}
+
+% Listings with syntax highlighting; requires --shell-escape
+\usepackage[newfloat]{minted}
+
+% Fine spacing control for math
+\usepackage{mleftright}
+
+% PDF inclusion
+\usepackage{pdfpages}
+
+% Relative font sizes
+\usepackage{relsize}
+
+% URL's
+\usepackage{url}
+
+% Drawings and Graphs
+\usepackage{tikz}
+\usetikzlibrary{babel}
+\usetikzlibrary{calc}
+\usetikzlibrary{external} % requires --shell-escape
+\usetikzlibrary{positioning}
+\tikzsetexternalprefix{tikz-externals}
+% \tikzexternalize Render TikZ externally, fails for some references
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+% Needs to go last:
+
+% Language-sensitive quotation marks
+\usepackage{csquotes}
+
+% Break URLs at / and -
+\def\UrlBreaks{\do\/\do-}
+
+%%%%%%%%%%%%%%%%%%%%
+% Style and layout %
+%%%%%%%%%%%%%%%%%%%%
+
+% Load Theme
+\usetheme{TUDo}
+\titlegraphic{illustrations/Spektralringe}
+
+% Neat + for et al
+\renewcommand*{\labelalphaothers}{\raisebox{.3ex}{\relsize{-3}{\bfseries +}}}
+\renewcommand*{\sortalphaothers}{+}
+
+% Remove algorithm captions, see examples
+\renewcommand{\AlCapSty}{}
+
+% Use minted's line numbers for algorithm2e
+\let\vrbstyle\theFancyVerbLine
+\patchcmd{\vrbstyle}{\arabic{FancyVerbLine}}{}{}{}
+\SetNlSty{vrbstyle}{}{}
+
+% Pastel colored listings
+\usemintedstyle{friendly}
+
+% German strings
+\addto\captionsgerman{%
+    \renewcommand{\listlistingname}{Listingverzeichnis}%
+}
+
+%%%%%%%%%%%
+% Content %
+%%%%%%%%%%%
+
+% Load external resources
+\addbibresource{bibliography.bib}
+
+% Internal metadata setup
+\title{\talktitle}
+\author{\talkauthor}
+\date{\talkdate}
+
+\institute{%
+    \faculty
+
+    \chair
+
+    \workgroup%
+}
+
+\AtBeginSection[]{
+    \begin{frame}<beamer>
+        \frametitle{\contentsname}
+        \tableofcontents[
+            currentsection,
+            currentsubsection,
+            hideothersubsections,
+            sectionstyle=show/shaded,
+        ]
+    \end{frame}
+}
