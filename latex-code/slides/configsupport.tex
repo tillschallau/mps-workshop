@@ -1,0 +1,83 @@
+% !TEX root = slides.tex
+
+\usepackage{expl3}
+\usepackage{xparse}
+
+%%%%%%%%%%%%
+% Metadata %
+%%%%%%%%%%%%
+
+\ExplSyntaxOn
+
+\tl_new:N   \l__configsupport_title_tl
+\tl_new:N   \l__configsupport_author_tl
+\tl_new:N   \l__configsupport_iso_date_tl
+\tl_new:N   \l__configsupport_faculty_tl
+\tl_new:N   \l__configsupport_chair_tl
+\tl_new:N   \l__configsupport_workgroup_tl
+\bool_new:N \l__configsupport_english_bool
+
+\ProvideExpandableDocumentCommand{\settalktitle}{m}{
+    \tl_set:Nn \l__configsupport_title_tl {#1}
+}
+\ProvideExpandableDocumentCommand{\talktitle}{}{\tl_use:N \l__configsupport_title_tl}
+
+\ProvideExpandableDocumentCommand{\settalkauthor}{m}{
+    \tl_set:Nn \l__configsupport_author_tl {#1}
+}
+\ProvideExpandableDocumentCommand{\addtalkauthor}{m}{
+    \tl_if_empty:NF \l__configsupport_author_tl { \tl_put_right:Nn \l__configsupport_author_tl {,\ } }
+    \tl_put_right:Nn \l__configsupport_author_tl {#1}
+}
+\ProvideExpandableDocumentCommand{\talkauthor}{}{\tl_use:N \l__configsupport_author_tl}
+
+\ProvideExpandableDocumentCommand{\settalkisodate}{m}{
+    \tl_set:Nn \l__configsupport_iso_date_tl {#1}
+}
+\ProvideExpandableDocumentCommand{\talkisodate}{}{\tl_use:N \l__configsupport_iso_date_tl}
+\ProvideExpandableDocumentCommand{\talkdate}{}{\exp_args:Nf \DTMDate \talkisodate}
+
+\ProvideExpandableDocumentCommand{\setfaculty}{m}{
+    \tl_set:Nn \l__configsupport_faculty_tl {#1}
+}
+\ProvideExpandableDocumentCommand{\faculty}{}{\tl_use:N \l__configsupport_faculty_tl}
+
+\ProvideExpandableDocumentCommand{\setchair}{m}{
+    \tl_set:Nn \l__configsupport_chair_tl {#1}
+}
+\ProvideExpandableDocumentCommand{\chair}{}{\tl_use:N \l__configsupport_chair_tl}
+
+\ProvideExpandableDocumentCommand{\setworkgroup}{m}{
+    \tl_set:Nn \l__configsupport_workgroup_tl {#1}
+}
+\ProvideExpandableDocumentCommand{\workgroup}{}{\tl_use:N \l__configsupport_workgroup_tl}
+
+\ProvideExpandableDocumentCommand{\germantalk}{}{
+    \bool_set_false:N \l__configsupport_english_bool
+}
+
+\ProvideExpandableDocumentCommand{\englishtalk}{}{
+    \bool_set_true:N \l__configsupport_english_bool
+}
+
+\ProvideExpandableDocumentCommand{\languagesetup}{}{
+    \bool_if:NTF \l__configsupport_english_bool {
+        \setdefaultlanguage[variant=usmax]{english}
+        \setotherlanguage[variant=german, latesthyphen=true]{german}
+    } {
+        \setdefaultlanguage[variant=german, latesthyphen=true]{german}
+        \setotherlanguage[variant=usmax]{english}
+    }
+}
+
+\ExplSyntaxOff
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Shorthand commands %
+%%%%%%%%%%%%%%%%%%%%%%
+
+\ProvideExpandableDocumentCommand{\aquaheader}{}{
+    \setfaculty{Fakultät für Informatik}
+    \setchair{Lehrstuhl 14 für Software Engineering}
+    \setworkgroup{Arbeitsgruppe AQUA}
+}

@@ -1,0 +1,59 @@
+% Basierend auf dem LaTeX-Beamer-Theme der TU Dortmund
+% Erstellt von Maximilian Nöthe <maximilian.noethe@tu-dortmund.de>
+% Version 1.1 vom 27.5.2014
+% Vielen Dank an Carsten Raas für seine Mithilfe
+
+\mode<presentation>
+
+\setbeamersize{text margin  left=18pt}
+\setbeamersize{text margin right=18pt}
+
+\defbeamertemplate*{headline}{TUDo}[1][0]
+{
+    \leftskip=18pt
+    \vspace{13.5pt}
+    \begin{beamercolorbox}[wd=\paperwidth, ht=0.75cm]{header}
+        \hspace{18pt}
+        \begin{beamercolorbox}[ht=0.75cm, wd=0.4\linewidth]{institute}
+            \includegraphics[height=0.75cm]{illustrations/tud_logo_cmyk}
+            %\hfill
+        \end{beamercolorbox}
+        \hfill
+        \begin{beamercolorbox}[ht=0.75cm, wd=0.4\linewidth, right]{institute}
+            {\usebeamerfont{institute}\insertinstitute}
+        \end{beamercolorbox}
+        \hspace{18pt}
+    \end{beamercolorbox}
+    \vspace{6pt}
+    \ifnum\insertframenumber>0
+        \vspace{-0.4pt}\hspace{18pt}\usebeamercolor[fg]{headsepline}\rule{\linewidth}{0.4pt}
+    \fi
+    \vspace{10pt}
+}
+
+\defbeamertemplate*{footline}{TUDo}[1][0]
+{
+    \hspace{15pt}
+    \begin{beamercolorbox}[wd=\linewidth]{footline}
+        \begin{beamercolorbox}[wd=0.25\linewidth, left]{author}
+            \usebeamerfont{author}\insertauthor\ |\ \usebeamerfont{date}\insertdate
+        \end{beamercolorbox}
+        \hfill
+        \begin{beamercolorbox}[wd=0.45\linewidth,center]{section in header}
+            \ifx\insertsubsection\empty
+            \usebeamerfont{section in head/foot}\insertsection
+            \else
+            \usebeamerfont{section in head/foot}\insertsection: \ \usebeamerfont{subsection in head/foot}\insertsubsection
+            \fi
+        \end{beamercolorbox}
+        \hfill
+        \begin{beamercolorbox}[wd=0.15\linewidth, right]{frame number}
+            \ifnum\insertframenumber>0
+            \usebeamerfont{page number in head/foot}\insertframenumber /\inserttotalframenumber
+            \fi
+        \end{beamercolorbox}
+    \end{beamercolorbox}
+    \vspace{12pt}
+}
+
+\mode<all>

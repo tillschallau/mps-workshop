@@ -12,6 +12,7 @@
   </facets>
   <accessoryModels>
     <model modelUID="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
+    <model modelUID="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
   </accessoryModels>
   <generators>
     <generator alias="main" namespace="de.tudo.cs.ls14.aqua.mps.workshop.java#01" uuid="a50671b4-e80a-4b62-a3b7-b1a92e627b5c">
