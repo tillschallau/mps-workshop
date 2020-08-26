@@ -2,8 +2,10 @@ image: nopreserveroot/texlive-full
 
 build:
   script:
-    - latexmk -pdf latex-code/exercise/exercise
-    - latexmk -pdf latex-code/slides/slides
+    - cd latex-code/exercise
+    - latexmk -pdf exercise
+    - cd ../slides
+    - latexmk -pdf slides
   artifacts:
     paths:
       - latex-code/exercise/exercise.pdf
