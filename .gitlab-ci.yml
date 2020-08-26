@@ -5,7 +5,7 @@ build:
     - cd latex-code/exercise
     - latexmk -pdf exercise
     - cd ../slides
-    - latexmk -pdf slides
+    - latexmk slides
   artifacts:
     paths:
       - latex-code/exercise/exercise.pdf
