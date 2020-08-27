@@ -84,7 +84,6 @@
 		\end{minipage}
 		\begin{minipage}{0.45\textwidth}
 			\includegraphics[height=0.8\textheight]{illustrations/concept.png}
-			%IfStatement als Beispiel%
 		\end{minipage}
 	\end{frame}
 
@@ -103,9 +102,71 @@
 				\textcolor{white}{Collection cell: n} \texttt{[/ /]} (vertical) 
 			\end{itemize}
 		\end{minipage}
-	\begin{minipage}{0.4\textwidth}
-		\includegraphics[height=0.8\textheight]{illustrations/editor.png}
-	\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.8\textheight]{illustrations/editor.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{Intentions\footnote{\url{https://www.jetbrains.com/help/mps/mps-intentions.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Intentions:
+			\begin{itemize}
+				\item Provide \menu{\workshopintention} menu by pressing \menu{Alt}+\menu{\return}
+				\item Execute predefined actions
+				\item Can be used to correct errors (\textbf{error intention})
+			\end{itemize}
+			Variants:
+			\begin{itemize}
+				\item Intention
+				\item Universal Intention
+				\item Surround With Intention
+				\item Parameterized Intention
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/intention.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{Checking Rules\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Checks:
+			\begin{itemize}
+				\item Inspect the model for known error patterns
+				\item Static code analysis
+				\item Reports found errors/warnings/infos
+				\item Can provide quick fixes for errors/warnings
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.8\textheight]{illustrations/check.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{Quick Fixes\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Quick Fixes can be attached to the \texttt{error}, \texttt{warning}\\
+			or \texttt{info} call in a checking rule via the \\
+			\menu{\workshopinspector{}} menu
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.8\textheight]{illustrations/quickfix.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{Transformations\footnote{\url{https://www.jetbrains.com/help/mps/transformation-menu-language.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Transformations let you edit the AST by replacing \\
+			and moving AST nodes in a specified order\\
+			
+			\textbf{Example:}\\
+			\texttt{(x and y)} type \menu{or} should yield \\
+			\texttt{((x and y) or \_)}\\
+			\includegraphics[height=0.4\textheight]{tikz/transformation.pdf}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.75\textheight]{illustrations/transformation.png}
+		\end{minipage}
 	\end{frame}
 
     \section{Literatur}
