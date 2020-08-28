@@ -58,9 +58,9 @@
 
 	\section{Language Design}
 	
-	\begin{frame}{Structure}
-		The structure of a language is defined as a \textbf{Concept}\footnote{\url{https://www.jetbrains.com/help/mps/structure.html}} in MPS\\
-		\begin{minipage}{0.45\textwidth}
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/concept.png}  Structure\footnote{\url{https://www.jetbrains.com/help/mps/structure.html}}}
+		The structure of a language is defined as a \textbf{Concept} in MPS\\
+		\begin{minipage}{0.52\textwidth}
 			Concept:
 			\begin{itemize}
 				\item Inheritance
@@ -82,12 +82,14 @@
 				\end{itemize}
 			\end{itemize}
 		\end{minipage}
-		\begin{minipage}{0.45\textwidth}
+		\begin{minipage}{0.4\textwidth}
 			\includegraphics[height=0.8\textheight]{illustrations/concept.png}
 		\end{minipage}
 	\end{frame}
 
-	\begin{frame}{Editor\footnote{\url{https://www.jetbrains.com/help/mps/editor.html}}}
+	\section{Language Editor}
+
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/editor.png}  Editor\footnote{\url{https://www.jetbrains.com/help/mps/editor.html}}}
 		\begin{minipage}{0.52\textwidth}
 			Types of Cell Models:
 			\begin{itemize}
@@ -107,7 +109,7 @@
 		\end{minipage}
 	\end{frame}
 
-	\begin{frame}{Intentions\footnote{\url{https://www.jetbrains.com/help/mps/mps-intentions.html}}}
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/intentions.png} Intentions\footnote{\url{https://www.jetbrains.com/help/mps/mps-intentions.html}}}
 		\begin{minipage}{0.52\textwidth}
 			Intentions:
 			\begin{itemize}
@@ -124,11 +126,11 @@
 			\end{itemize}
 		\end{minipage}
 		\begin{minipage}{0.4\textwidth}
-		\includegraphics[height=0.8\textheight]{illustrations/intention.png}
+			\includegraphics[height=0.8\textheight]{illustrations/intention.png}
 		\end{minipage}
 	\end{frame}
 
-	\begin{frame}{Checking Rules\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/checkingrules.png} Checking Rules\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
 		\begin{minipage}{0.52\textwidth}
 			Checks:
 			\begin{itemize}
@@ -143,7 +145,7 @@
 		\end{minipage}
 	\end{frame}
 
-	\begin{frame}{Quick Fixes\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/quickfix.png} Quick Fixes\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
 		\begin{minipage}{0.52\textwidth}
 			Quick Fixes can be attached to the \texttt{error}, \texttt{warning}\\
 			or \texttt{info} call in a checking rule via the \\
@@ -154,10 +156,10 @@
 		\end{minipage}
 	\end{frame}
 
-	\begin{frame}{Transformations\footnote{\url{https://www.jetbrains.com/help/mps/transformation-menu-language.html}}}
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/transformation.png} Transformations\footnote{\url{https://www.jetbrains.com/help/mps/transformation-menu-language.html}}}
 		\begin{minipage}{0.52\textwidth}
 			Transformations let you edit the AST by replacing \\
-			and moving AST nodes in a specified order\\
+			and moving AST nodes\\
 			
 			\textbf{Example:}\\
 			\texttt{(x and y)} type \menu{or} should yield \\
@@ -169,11 +171,52 @@
 		\end{minipage}
 	\end{frame}
 
-    \section{Literatur}
-
-    \begin{frame}[t, allowframebreaks]
-        \frametitle{Literatur}
-        \printbibliography
-    \end{frame}
+	\section{Language Generation}
+	
+	\begin{frame}{Language Generation}
+		In MPS there are two possible ways of generating (here: transforming) code.\\
+		
+		\begin{minipage}{0.4\textwidth}
+			\textbf{Model-To-Model Transformation}
+		\end{minipage} 
+		\begin{minipage}{0.09\textwidth}
+			\Large
+			\textcolor{white}{$\Rightarrow$}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\textbf{Model-To-Text Transformation}
+		\end{minipage}
+	
+		\vspace*{0.5cm}
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{itemize}
+				\item Translate models into other models
+				\item Predefined models exist:
+				\begin{itemize}
+					\item Base Language (Java)
+					\item mbeddr (C and C extensions) \footnotemark[8]
+					\item MPS CSharp (C\#) \footnotemark[9]
+				\end{itemize}
+				\item Does not flush text into file
+				\item Each predefined model has an associated Model-To-Text Transformation
+			\end{itemize}
+		\end{minipage} 
+		\footnotetext[8]{\url{http://mbeddr.com/}}
+		\footnotetext[9]{\url{https://github.com/vaclav/MPS_CSharp}}
+		\begin{minipage}{0.09\textwidth}
+			\Large
+			$\Rightarrow$
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{itemize}
+				\item Convert a model into text
+				\item Give the output some reasonable layout
+				\item Lets you define a file ending (e.g. \texttt{.java})
+				\item Flush text into a file
+			\end{itemize}
+		\end{minipage}
+	\end{frame}
+	
 \end{document}
 
