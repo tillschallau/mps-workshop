@@ -217,6 +217,113 @@
 			\end{itemize}
 		\end{minipage}
 	\end{frame}
+
+	\begin{frame}{Model-To-Model Transformation \footnote[10]{\url{https://www.jetbrains.com/help/mps/generator-language.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Each generator consists of \textbf{\workshopconfiguration s} that combines all templates\\
+			
+			Some Generator Rules:\\
+			\begin{itemize}
+				\item \textbf{Root Mapping Rule:} Generates a root node in the output model
+				\item \textbf{Reduction Rule:} Transforms a node based on a template
+				\item \textbf{Mapping Label:} Helper for name consistency throughout generation
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.75\textheight]{illustrations/mapping.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate s \footnote[11]{\url{https://www.jetbrains.com/help/mps/generator-language.html}}}
+		\begin{minipage}{0.52\textwidth}			
+			Template Macros used in a \textbf{Template Fragment <TF TF>}:\\
+			\begin{itemize}
+				\item \textbf{Property \$[]:} Computes value of a property
+				\item \textbf{Reference ->\$[]:} Computes referent node
+				\item \textbf{\$IF\$[]:} Conditional generation of template code
+				\item \textbf{\$LOOP\$[]:} Applies template to set of nodes
+				\item \textbf{\$CALL\$[]:} Calls another template with parameters
+				\item \textbf{\$COPY\_SRC\$[]:} Copies node
+				\item \textbf{\$LABEL\$[]:} Registers generated name into generation context
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.5\textheight]{illustrations/template.png}
+			\includegraphics[height=0.38\textheight]{illustrations/template_inspector.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate\ Combination 1/4}
+	\begin{minipage}{0.52\textwidth}
+		Now the \texttt{MethodDef} concept is contained in a \texttt{ClassDef}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/classDef.png}
+	\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate\ Combination 2/4}
+	\begin{minipage}{0.52\textwidth}
+		The \texttt{ClassDef} generator template contains a statically generated method \texttt{print()}\\
+		
+		The \texttt{ClassDef} generator template contains the generated output of the \texttt{MethodDef} concept
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/classDefGen.png}
+	\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate\ Combination 3/4}
+	\begin{minipage}{0.52\textwidth}
+		To generate the method, generate its children: \\
+		\begin{itemize}
+			\item \texttt{Variables} (e.g. \texttt{\$COPY\_SRCL\$[String s = "";]})
+			\item \texttt{Statements} (e.g. \texttt{\$COPY\_SRCL\$[s = "";]})
+		\end{itemize}
+	
+		\textcolor{white}{m}\\
+		
+		What is now needed to always call the \texttt{print}-method of the \texttt{ClassDef}-concept generation output? The method is currently not available in this context.
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/methodDefGen.png}
+	\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate\ Combination 4/4}
+	\begin{minipage}{0.52\textwidth}
+		To use the \texttt{print}-method, simulate the surrounding environment necessary for the generation (e.g. the surrounding class with its \texttt{print()}-method)\\
+		
+		Mark the code that should be generated with the \texttt{Template Fragment} macro
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/methodDefGen2.png}
+	\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptextgen\ \footnote{\url{https://www.jetbrains.com/help/mps/textgen.html}}}
+	\begin{minipage}{0.52\textwidth}
+		The TextGen language operations:\\
+		\begin{itemize}
+			\item \textbf{append:} append text of the following kind:
+			\begin{itemize}
+				\item \textbf{\{string value\}:} constant text
+				\item \textbf{\textbackslash n:} line break
+				\item \textbf{\$list\{node.list\}:} list without separator
+				\item \textbf{\$list\{node.list with ,\}:} list with separator ``,''
+				\item \textbf{\$\{node.child\}}
+			\end{itemize}
+			\item \textbf{with indent \{ code \}:} increase indentation level for \texttt{code}
+			\item \textbf{indent buffer:} apply indentation for current line
+			\item \textbf{increase depth:} increase indentation level
+			\item \textbf{decrease depth:} decrease indentation level
+		\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.9\textheight]{illustrations/textgen.png}
+	\end{minipage}
+	\end{frame}
+
 	
 \end{document}
 
