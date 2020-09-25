@@ -56,7 +56,20 @@
 		\end{center}
 	\end{frame}
 
-	\section{Language Design}
+	\begin{frame}{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept.pdf}
+	\end{frame}
+
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_1.pdf}
+	\end{frame}	
+	
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_2.pdf}
+	\end{frame}
+
+
+	\section{Abstract Syntax}
 	
 	\begin{frame}{\includegraphics[height=0.25cm]{graphics/concept.png}  Structure\footnote{\url{https://www.jetbrains.com/help/mps/structure.html}}}
 		The structure of a language is defined as a \textbf{Concept} in MPS\\
@@ -87,7 +100,19 @@
 		\end{minipage}
 	\end{frame}
 
-	\section{Language Editor}
+	\begin{frame}{Hands-On}
+		After this introduction into the structure of MPS, there is a repository with all necessary information under \url{https://github.com/tillschallau/mps-workshop}
+	\end{frame}
+
+	\section{Concrete Syntax}
+	
+	\begin{frame}{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_3.pdf}
+	\end{frame}
+
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_4.pdf}
+	\end{frame}
 
 	\begin{frame}{\includegraphics[height=0.25cm]{graphics/editor.png}  Editor\footnote{\url{https://www.jetbrains.com/help/mps/editor.html}}}
 		\begin{minipage}{0.52\textwidth}
@@ -107,6 +132,21 @@
 		\begin{minipage}{0.4\textwidth}
 			\includegraphics[height=0.8\textheight]{illustrations/editor.png}
 		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/transformation.png} Transformations\footnote{\url{https://www.jetbrains.com/help/mps/transformation-menu-language.html}}}
+	\begin{minipage}{0.52\textwidth}
+		Transformations let you edit the AST by replacing \\
+		and moving AST nodes\\
+		
+		\textbf{Example:}\\
+		\texttt{(x and y)} type \menu{or} should yield \\
+		\texttt{((x and y) or \_)}\\
+		\includegraphics[height=0.4\textheight]{tikz/transformation.pdf}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.75\textheight]{illustrations/transformation.png}
+	\end{minipage}
 	\end{frame}
 
 	\begin{frame}{\includegraphics[height=0.25cm]{graphics/intentions.png} Intentions\footnote{\url{https://www.jetbrains.com/help/mps/mps-intentions.html}}}
@@ -130,6 +170,16 @@
 		\end{minipage}
 	\end{frame}
 
+	\section{Static Semantics}
+	
+	\begin{frame}{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_5.pdf}
+	\end{frame}
+	
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_6.pdf}
+	\end{frame}
+		
 	\begin{frame}{\includegraphics[height=0.25cm]{graphics/checkingrules.png} Checking Rules\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
 		\begin{minipage}{0.52\textwidth}
 			Checks:
@@ -144,7 +194,7 @@
 			\includegraphics[height=0.8\textheight]{illustrations/check.png}
 		\end{minipage}
 	\end{frame}
-
+	
 	\begin{frame}{\includegraphics[height=0.25cm]{graphics/quickfix.png} Quick Fixes\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
 		\begin{minipage}{0.52\textwidth}
 			Quick Fixes can be attached to the \texttt{error}, \texttt{warning}\\
@@ -156,22 +206,15 @@
 		\end{minipage}
 	\end{frame}
 
-	\begin{frame}{\includegraphics[height=0.25cm]{graphics/transformation.png} Transformations\footnote{\url{https://www.jetbrains.com/help/mps/transformation-menu-language.html}}}
-		\begin{minipage}{0.52\textwidth}
-			Transformations let you edit the AST by replacing \\
-			and moving AST nodes\\
-			
-			\textbf{Example:}\\
-			\texttt{(x and y)} type \menu{or} should yield \\
-			\texttt{((x and y) or \_)}\\
-			\includegraphics[height=0.4\textheight]{tikz/transformation.pdf}
-		\end{minipage}
-		\begin{minipage}{0.4\textwidth}
-			\includegraphics[height=0.75\textheight]{illustrations/transformation.png}
-		\end{minipage}
+	\section{Semantics}
+	
+	\begin{frame}{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_7.pdf}
 	\end{frame}
-
-	\section{Language Generation}
+	
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_8.pdf}
+	\end{frame}
 	
 	\begin{frame}{Language Generation}
 		In MPS there are two possible ways of generating (here: transforming) code.\\
@@ -322,12 +365,6 @@
 	\begin{minipage}{0.4\textwidth}
 		\includegraphics[height=0.9\textheight]{illustrations/textgen.png}
 	\end{minipage}
-	\end{frame}
-
-	\section{Hands-On}	
-	
-	\begin{frame}{Hands-On}
-		After this introduction into the world of MPS, there is a repository with all necessary information under \url{https://aqua-scm.cs.tu-dortmund.de/aqua/mps-workshop}
 	\end{frame}
 	
 
