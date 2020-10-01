@@ -1,11 +1,11 @@
 \begin{tikzpicture}
 
 \node at (5.125,1.25) {IfStatement};
-\draw  (-1.125,0.25) rectangle (1.125,-0.375);
+\draw[fill=blue!30]  (-1.125,0.25) rectangle (1.125,-0.375);
 \node at (7.625,1.375) {Statement};
-\draw  (0.625,-1.375) rectangle (2.625,-2);
+\draw[fill=green!40]  (0.625,-1.375) rectangle (2.625,-2);
 
-\draw  (-2.625,-1.375) rectangle (-0.625,-2);
+\draw[fill=red!40]  (-2.625,-1.375) rectangle (-0.625,-2);
 \node (v2) at (-1.625,-1.375) {};
 \node (v3) at (1.625,-1.375) {};
 \node (v1) at (0,-0.375) {};
@@ -14,7 +14,7 @@
 \node at (1.375,-0.875) {true};
 \node at (-1.5,-0.875) {false};
 \node at (6.375,2.125) {MethodDef};
-\draw  (0.5,2.125) rectangle (2.75,1.5);
+\draw[fill=orange!40]  (0.5,2.125) rectangle (2.75,1.5);
 \node (v4) at (1.625,1.5) {};
 \node (v5) at (0,0.25) {};
 \draw  (v4) edge (v5);
