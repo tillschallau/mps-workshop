@@ -253,6 +253,7 @@
 		\end{minipage}
 	
 		\vspace*{0.5cm}
+		\pause
 		
 		\begin{minipage}{0.4\textwidth}
 			\begin{itemize}
@@ -269,6 +270,7 @@
 		\end{minipage} 
 		\footnotetext[8]{\url{http://mbeddr.com/}}
 		\footnotetext[9]{\url{https://github.com/vaclav/MPS_CSharp}}
+		\pause
 		\begin{minipage}{0.09\textwidth}
 			\Large
 			$\Rightarrow$
@@ -295,7 +297,7 @@
 			\end{itemize}
 		\end{minipage}
 		\begin{minipage}{0.4\textwidth}
-			\includegraphics[height=0.75\textheight]{illustrations/mapping.png}
+			\includegraphics[height=0.85\textheight]{illustrations/mapping.png}
 		\end{minipage}
 	\end{frame}
 
@@ -320,7 +322,7 @@
 
 	\begin{frame}{\workshoptemplate\ Combination 1/4}
 	\begin{minipage}{0.52\textwidth}
-		Now the \texttt{MethodDef} concept is contained in a \texttt{ClassDef}
+		Lets wrap the \texttt{MethodDef} concept into a newly created concept  \texttt{ClassDef}
 	\end{minipage}
 	\begin{minipage}{0.4\textwidth}
 		\includegraphics[height=0.8\textheight]{illustrations/classDef.png}
@@ -348,7 +350,7 @@
 	
 		\textcolor{white}{m}\\
 		
-		What is now needed to always call the \texttt{print}-method of the \texttt{ClassDef}-concept generation output? The method is currently not available in this context.
+		If we now want to call the \texttt{print}-method of the \texttt{ClassDef}-concept, the current template has to be enhanced, as the method is currently not available in our context.
 	\end{minipage}
 	\begin{minipage}{0.4\textwidth}
 		\includegraphics[height=0.8\textheight]{illustrations/methodDefGen.png}
