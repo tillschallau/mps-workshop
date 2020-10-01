@@ -36,10 +36,6 @@
     	\end{itemize}
     \end{frame}
 
-	\begin{frame}
-		DSl Landschaft beschreiben (Grafik auf VuC) -> Basis auf AST ohne Parser
-	\end{frame}
-
 	\begin{frame}{Abstract Syntax Tree}
 		MPS is using an AST as its underlying model, therefore no specific parser is necessary.\\
 		
@@ -56,11 +52,30 @@
 		\end{center}
 	\end{frame}
 
-	\section{Language Design}
+	\begin{frame}{Hands-On}
+		After this introduction into MPS, there is a repository with all necessary information under \url{https://github.com/tillschallau/mps-workshop}.\\
+		
+		In the now upcoming Hands-On part work on the \textbf{exercises 3.1 - 4.1}
+	\end{frame}
+
+	\begin{frame}{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept.pdf}
+	\end{frame}
+
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_1.pdf}
+	\end{frame}	
 	
-	\begin{frame}{Structure}
-		The structure of a language is defined as a \textbf{Concept}\footnote{\url{https://www.jetbrains.com/help/mps/structure.html}} in MPS\\
-		\begin{minipage}{0.45\textwidth}
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_2.pdf}
+	\end{frame}
+
+
+	\section{Abstract Syntax}
+	
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/concept.png}  Structure\footnote{\url{https://www.jetbrains.com/help/mps/structure.html}}}
+		The structure of a language is defined as a \textbf{Concept} in MPS\\
+		\begin{minipage}{0.52\textwidth}
 			Concept:
 			\begin{itemize}
 				\item Inheritance
@@ -82,13 +97,30 @@
 				\end{itemize}
 			\end{itemize}
 		\end{minipage}
-		\begin{minipage}{0.45\textwidth}
+		\begin{minipage}{0.4\textwidth}
 			\includegraphics[height=0.8\textheight]{illustrations/concept.png}
-			%IfStatement als Beispiel%
 		\end{minipage}
 	\end{frame}
 
-	\begin{frame}{Editor\footnote{\url{https://www.jetbrains.com/help/mps/editor.html}}}
+	\begin{frame}
+		\begin{center}
+			\Huge \textbf{Hands-On}\\
+			
+			Exercise 4.2
+		\end{center}
+	\end{frame}
+
+	\section{Concrete Syntax}
+	
+	\begin{frame}{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_3.pdf}
+	\end{frame}
+
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_4.pdf}
+	\end{frame}
+
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/editor.png}  Editor\footnote{\url{https://www.jetbrains.com/help/mps/editor.html}}}
 		\begin{minipage}{0.52\textwidth}
 			Types of Cell Models:
 			\begin{itemize}
@@ -103,16 +135,275 @@
 				\textcolor{white}{Collection cell: n} \texttt{[/ /]} (vertical) 
 			\end{itemize}
 		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.8\textheight]{illustrations/editor.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/transformation.png} Transformations\footnote{\url{https://www.jetbrains.com/help/mps/transformation-menu-language.html}}}
+	\begin{minipage}{0.52\textwidth}
+		Transformations let you edit the AST by replacing \\
+		and moving AST nodes\\
+		
+		\textbf{Example:}\\
+		\texttt{(x and y)} type \menu{or} should yield \\
+		\texttt{((x and y) or \_)}\\
+		\includegraphics[height=0.4\textheight]{tikz/transformation.pdf}
+	\end{minipage}
 	\begin{minipage}{0.4\textwidth}
-		\includegraphics[height=0.8\textheight]{illustrations/editor.png}
+		\includegraphics[height=0.75\textheight]{illustrations/transformation.png}
 	\end{minipage}
 	\end{frame}
 
-    \section{Literatur}
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/intentions.png} Intentions\footnote{\url{https://www.jetbrains.com/help/mps/mps-intentions.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Intentions:
+			\begin{itemize}
+				\item Provide \menu{\workshopintention} menu by pressing \menu{Alt}+\menu{\return}
+				\item Execute predefined actions
+				\item Can be used to correct errors (\textbf{error intention})
+			\end{itemize}
+			Variants:
+			\begin{itemize}
+				\item Intention
+				\item Universal Intention
+				\item Surround With Intention
+				\item Parameterized Intention
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.8\textheight]{illustrations/intention.png}
+		\end{minipage}
+	\end{frame}
 
-    \begin{frame}[t, allowframebreaks]
-        \frametitle{Literatur}
-        \printbibliography
-    \end{frame}
+	\begin{frame}
+		\begin{center}
+			\Huge \textbf{Hands-On}\\
+			
+			Exercises 4.3 - 4.5
+		\end{center}
+	\end{frame}
+
+	\section{Static Semantics}
+	
+	\begin{frame}{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_5.pdf}
+	\end{frame}
+	
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_6.pdf}
+	\end{frame}
+		
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/checkingrules.png} Checking Rules\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Checks:
+			\begin{itemize}
+				\item Inspect the model for known error patterns
+				\item Static code analysis
+				\item Reports found errors/warnings/infos
+				\item Can provide quick fixes for errors/warnings
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.8\textheight]{illustrations/check.png}
+		\end{minipage}
+	\end{frame}
+	
+	\begin{frame}{\includegraphics[height=0.25cm]{graphics/quickfix.png} Quick Fixes\footnote{\url{https://www.jetbrains.com/help/mps/typesystem.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Quick Fixes can be attached to the \texttt{error}, \texttt{warning}\\
+			or \texttt{info} call in a checking rule via the \\
+			\menu{\workshopinspector{}} menu
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.8\textheight]{illustrations/quickfix.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}
+		\begin{center}
+			\Huge \textbf{Hands-On}\\
+			
+			Exercise 4.6
+		\end{center}
+	\end{frame}
+
+	\section{Semantics}
+	
+	\begin{frame}{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_7.pdf}
+	\end{frame}
+	
+	\begin{frame}[noframenumbering]{Model-Driven Engineering}
+		\includegraphics[width=\textwidth]{tikz/mdsd_concept_8.pdf}
+	\end{frame}
+	
+	\begin{frame}{Language Generation}
+		In MPS there are two possible ways of generating (here: transforming) code.\\
+		
+		\begin{minipage}{0.4\textwidth}
+			\textbf{Model-To-Model Transformation}
+		\end{minipage} 
+		\begin{minipage}{0.09\textwidth}
+			\Large
+			\textcolor{white}{$\Rightarrow$}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\textbf{Model-To-Text Transformation}
+		\end{minipage}
+	
+		\vspace*{0.5cm}
+		\pause
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{itemize}
+				\item Translate models into other models
+				\item Predefined models exist:
+				\begin{itemize}
+					\item Base Language (Java)
+					\item mbeddr (C and C extensions) \footnotemark[8]
+					\item MPS CSharp (C\#) \footnotemark[9]
+				\end{itemize}
+				\item Does not flush text into file
+				\item Each predefined model has an associated Model-To-Text Transformation
+			\end{itemize}
+		\end{minipage} 
+		\footnotetext[8]{\url{http://mbeddr.com/}}
+		\footnotetext[9]{\url{https://github.com/vaclav/MPS_CSharp}}
+		\pause
+		\begin{minipage}{0.09\textwidth}
+			\Large
+			$\Rightarrow$
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{itemize}
+				\item Convert a model into text
+				\item Give the output some reasonable layout
+				\item Lets you define a file ending (e.g. \texttt{.java})
+				\item Flush text into a file
+			\end{itemize}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{Model-To-Model Transformation \footnote[10]{\url{https://www.jetbrains.com/help/mps/generator-language.html}}}
+		\begin{minipage}{0.52\textwidth}
+			Each generator consists of \textbf{\workshopconfiguration s} that combines all templates\\
+			
+			Some Generator Rules:\\
+			\begin{itemize}
+				\item \textbf{Root Mapping Rule:} Generates a root node in the output model
+				\item \textbf{Reduction Rule:} Transforms a node based on a template
+				\item \textbf{Mapping Label:} Helper for name consistency throughout generation
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.85\textheight]{illustrations/mapping.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate s \footnote[11]{\url{https://www.jetbrains.com/help/mps/generator-language.html}}}
+		\begin{minipage}{0.52\textwidth}			
+			Template Macros used in a \textbf{Template Fragment <TF TF>}:\\
+			\begin{itemize}
+				\item \textbf{Property \$[]:} Computes value of a property
+				\item \textbf{Reference ->\$[]:} Computes referent node
+				\item \textbf{\$IF\$[]:} Conditional generation of template code
+				\item \textbf{\$LOOP\$[]:} Applies template to set of nodes
+				\item \textbf{\$CALL\$[]:} Calls another template with parameters
+				\item \textbf{\$COPY\_SRC\$[]:} Copies node
+				\item \textbf{\$LABEL\$[]:} Registers generated name into generation context
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\includegraphics[height=0.5\textheight]{illustrations/template.png}
+			\includegraphics[height=0.38\textheight]{illustrations/template_inspector.png}
+		\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate\ Combination 1/4}
+	\begin{minipage}{0.52\textwidth}
+		Lets wrap the \texttt{MethodDef} concept into a newly created concept  \texttt{ClassDef}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/classDef.png}
+	\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate\ Combination 2/4}
+	\begin{minipage}{0.52\textwidth}
+		The \texttt{ClassDef} generator template contains a statically generated method \texttt{print()}\\
+		
+		The \texttt{ClassDef} generator template contains the generated output of the \texttt{MethodDef} concept
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/classDefGen.png}
+	\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate\ Combination 3/4}
+	\begin{minipage}{0.52\textwidth}
+		To generate the method, generate its children: \\
+		\begin{itemize}
+			\item \texttt{Variables} (e.g. \texttt{\$COPY\_SRCL\$[String s = "";]})
+			\item \texttt{Statements} (e.g. \texttt{\$COPY\_SRCL\$[s = "";]})
+		\end{itemize}
+	
+		\textcolor{white}{m}\\
+		
+		If we now want to call the \texttt{print}-method of the \texttt{ClassDef}-concept, the current template has to be enhanced, as the method is currently not available in our context.
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/methodDefGen.png}
+	\end{minipage}
+	\end{frame}
+
+	\begin{frame}{\workshoptemplate\ Combination 4/4}
+	\begin{minipage}{0.52\textwidth}
+		To use the \texttt{print}-method, simulate the surrounding environment necessary for the generation (e.g. the surrounding class with its \texttt{print()}-method)\\
+		
+		Mark the code that should be generated with the \texttt{Template Fragment} macro
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.8\textheight]{illustrations/methodDefGen2.png}
+	\end{minipage}
+	\end{frame}
+
+	\begin{frame}
+		\begin{center}
+			\Huge \textbf{Hands-On}\\
+			
+			Exercise 4.7
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{\workshoptextgen\ \footnote{\url{https://www.jetbrains.com/help/mps/textgen.html}}}
+	\begin{minipage}{0.52\textwidth}
+		The TextGen language operations:\\
+		\begin{itemize}
+			\item \textbf{append:} append text of the following kind:
+			\begin{itemize}
+				\item \textbf{\{string value\}:} constant text
+				\item \textbf{\textbackslash n:} line break
+				\item \textbf{\$list\{node.list\}:} list without separator
+				\item \textbf{\$list\{node.list with ,\}:} list with separator ``,''
+				\item \textbf{\$\{node.child\}}
+			\end{itemize}
+			\item \textbf{with indent \{ code \}:} increase indentation level for \texttt{code}
+			\item \textbf{indent buffer:} apply indentation for current line
+			\item \textbf{increase depth:} increase indentation level
+			\item \textbf{decrease depth:} decrease indentation level
+		\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[height=0.9\textheight]{illustrations/textgen.png}
+	\end{minipage}
+	\end{frame}
+
+	\begin{frame}
+		\begin{center}
+			\Huge \textbf{End of the workshop}\\
+			
+			Have a nice evening
+		\end{center}
+	\end{frame}	
 \end{document}
-

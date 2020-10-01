@@ -73,6 +73,8 @@
 % URL's
 \usepackage{url}
 
+\usepackage[os=win]{menukeys}
+
 % Drawings and Graphs
 \usepackage{tikz}
 \usetikzlibrary{babel}
@@ -151,3 +153,20 @@
         ]
     \end{frame}
 }
+
+ \newcommand{\workshoplanguage}[1]{\includegraphics[height=6px]{graphics/language.png} de.tudo.cs.ls14.aqua.mps.workshop.#1}
+
+\newcommand{\workshoplanguagecreation}[0]{\includegraphics[height=6px]{graphics/language.png} Language}
+\newcommand{\workshopsolution}[1]{\includegraphics[height=6px]{graphics/solution.png} de.tudo.cs.ls14.aqua.mps.workshop.#1}
+\newcommand{\workshopmodel}[1]{\includegraphics[height=6px]{graphics/model.png} #1}
+\newcommand{\workshopnode}[1]{\includegraphics[height=6px]{graphics/node.png} #1}
+\newcommand{\workshopproject}[0]{\includegraphics[height=6px]{graphics/project.png} mps-workshop}
+\newcommand{\workshoprun}[0]{\includegraphics[height=6px]{graphics/run.png} Run 'Node de.tudo.cs.ls14...'}
+\newcommand{\workshopmoduleproperties}[0]{\includegraphics[height=6px]{graphics/properties.png} Module Properties}
+\newcommand{\workshopruntime}[0]{\includegraphics[height=6px]{graphics/runtime.png} Runtime}
+\newcommand{\workshopversion}[0]{\menu{\includegraphics[height=6px]{graphics/version.png} Get from Version Control}}
+\newcommand{\workshopinspector}[0]{\includegraphics[height=6px]{graphics/inspector.png} Inspector}
+\newcommand{\workshopintention}[0]{\includegraphics[height=6px]{graphics/intention.png} Intention}
+\newcommand{\workshopconfiguration}[0]{\includegraphics[height=6px]{graphics/configuration.png} Mapping Configuration}
+\newcommand{\workshoptemplate}[0]{\includegraphics[height=6px]{graphics/template.png} Template}
+\newcommand{\workshoptextgen}[0]{\includegraphics[height=6px]{graphics/textgen.png} TextGen}
