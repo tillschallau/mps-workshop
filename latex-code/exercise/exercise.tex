@@ -61,7 +61,7 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Deklaration der Keyboard Tasten
   %Windows
-  \usepackage[os=win]{menukeys}
+  \usepackage[os=win]{menukeys} 
   
   %Mac OS X (symbols)
   %\usepackage[os=mac, mackeys=symbols]{menukeys}
@@ -153,8 +153,8 @@
   \begin{enumerate}
   	\item Download the latest version of MPS for your operating system from \\ \url{https://www.jetbrains.com/de-de/mps/download/}
   	\item Clone the \textit{mps-workshop} repository using \\
-  	\url{git@aqua-scm.cs.tu-dortmund.de:aqua/mps-workshop.git} or\\
-  	\url{https://aqua-scm.cs.tu-dortmund.de/aqua/mps-workshop.git}
+  	\url{git@github.com:tillschallau/mps-workshop.git} or\\
+  	\url{https://github.com/tillschallau/mps-workshop.git}
   	\item Open the project in MPS with \menu[,]{File, Open}
   	\item When prompted: \menu{migrate} the project
   	\item Right-click on the language \menu[,]{\workshoplanguage{java},Rebuild Language} to make the language available for the sandbox solution
@@ -167,7 +167,7 @@
   	\item Download the latest version of MPS for your operating system from \\ \url{https://www.jetbrains.com/de-de/mps/download/}
   	\item Open MPS
   	\item Select \workshopversion
-  	\item Enter \url{https://aqua-scm.cs.tu-dortmund.de/aqua/mps-workshop.git} into the \menu{URL} field, select a directory and press \menu{clone}
+  	\item Enter \url{https://github.com/tillschallau/mps-workshop.git} into the \menu{URL} field, select a directory and press \menu{clone}
   	\item When prompted: \menu{migrate} the project
   	\item Right-click on the language \menu[,]{\workshoplanguage{java},Rebuild Language} to make the language available for the sandbox solution
   	\item Right-click on the project \menu[,]{\workshopproject, Rebuild project}
@@ -276,16 +276,16 @@ public static void readLine(){
 	Intermediate solution: \menu{$\hookrightarrow$ expression-2-intentions}
 	
 	\begin{aufgabe}
+		Add transformations that automatically append a node into the AST after typing a specific keyword. Write transformations for the \texttt{and}- and \texttt{or}-Expression for both directions (left and right).
+	\end{aufgabe}
+	
+	Intermediate solution: \menu{$\hookrightarrow$ expression-3-transformations}
+	
+	\begin{aufgabe}
 	Add checks to ensure that each function name is unique. Add checks to ensure that each variable is unique for each function.
 	\end{aufgabe}
 
-	Intermediate solution: \menu{$\hookrightarrow$ expression-3-checks}
-	
-	\begin{aufgabe}
-	Add transformations that automatically append a node into the AST after typing a specific keyword. Write transformations for the \texttt{and}- and \texttt{or}-Expression for both directions (left and right).
-	\end{aufgabe}
-
-	Intermediate solution: \menu{$\hookrightarrow$ expression-4-transformations}
+	Intermediate solution: \menu{$\hookrightarrow$ expression-4-checks}
 	
 	\begin{aufgabe}
 		Add generators for at least one of \texttt{AExp} or \texttt{BExp}. Your code construct for the expression \texttt{x >= 2} should look like the following  Listing \ref{lst:gen}.
